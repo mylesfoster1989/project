@@ -38,122 +38,69 @@
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous">
     </script>
-
+    <script src="js/script.js"></script>
     <script>
-        $.ajax({
-            type: 'Get',
-            dataType: 'JSON',
-            url: 'https://nzwetland.herokuapp.com/api/site/',
-            success: function (data) {
-                // location.reload();
-
-                i = 0;
-                while (i < data.length){
-                    site = data[i];
-                    $("#site_id_input").append("<option value='"+site.id+"'>"+site.sitename+"\</option>");
-                    i = i + 1;
-                }
-                $("#site_id_input").change(function(){
-                    site = getSiteInfo($("#site_id_input").val());
-                });
-                $("#update_site_but").click(function(){
-                    updateSiteInfo($("#site_id_input").val());
-                });
-            },
-            error: function (err) {
-                console.log(err);
-            }
-        });
-
-        function getSiteInfo (site_id) {
-            $.ajax({
-                type: 'Get',
-                dataType: 'JSON',
-                url: 'https://nzwetland.herokuapp.com/api/site/'+site_id,
-                success: function (data) {
-                    // location.reload();
-                    $("#site_sitename").val(data.sitename);
-                    $("#site_area").val(data.area);
-                    $("#site_altitude").val(data.altitude);
-                    $("#site_sitetype").val(data.sitetype);
-                    $("#site_status").val(data.status);
-
-                    // var departmentID = data.department;
-
-                    console.log(data);
-
-                    // $.ajax({
-                    //     type: 'Get',
-                    //     dataType: 'JSON',
-                    //     url: 'https://morganoffice.herokuapp.com/api/departments/'+departmentID,
-                    //     success: function (data) {
-                    //         // location.reload();
-                    //         $("#department_name").text(data.name);
-                    //         console.log(data);
-                    //     },
-                    //     error: function (err) {
-                    //         console.log(err);
-                    //     }
-                    // });
-                },
-
-                error: function (err) {
-                    console.log(err);
-                }
-            });
-        }
-
-
-        function updateSiteInfo (site_id) {
-            // location.reload();
-            sitename1 = $("#site_sitename").val();
-            area1 = $("#site_area").val();
-            altitude1 = $("#site_altitude").val();
-            sitetype1 =$("#site_sitetype").val();
-            status1 =$("#site_status").val();
-            // hourlyrate1 =$("#investigator_hourlyrate").val();
-
-
-            $.ajax({
-                type: 'Put',
-                dataType: 'JSON',
-                url: 'https://nzwetland.herokuapp.com/api/site/'+site_id+'/',
-                data: {
-                    sitename: sitename1,
-                    area: area1,
-                    altitude: altitude1,
-                    sitetype: sitetype1,
-                    status: status1,
-                    // HourlyRate: hourlyrate1,
-                },
-                success: function (data) {
-                    alert("Site updated successfully")
-                },
-
-                // error: function (err) {
-                //     console.log(err);
-                //     errors = JSON.parse(err.responseText);
-                //     console.log(errors);
-                //     $("#lastname_input_err").text(errors.LastName);
-                //     $("#firstname_input_err").text(errors.FirstName);
-                //     $("#streetaddress_input_err").text(errors.StreetAddress);
-                //     $("#suburb_input_err").text(errors.suburb);
-                //     $("#phonenumber_input_err").text(errors.PhoneNumbrer);
-                //     $("#hourlyrate_input_err").text(errors.HourlyRate);
-                // },
-
-                error: function (err) {
-                    console.log(err);
-                }
-            });
-        }
-
-
         $(document).ready(function () {
+            sites = getAllSites();
+            var i = 0;
+            while (i < sites.length){
+                site = sites[i];
+                $("#site_id_input").append("<option value='"+site.id+"'>"+site.sitename+"</option>")
+                i++;
+            }
+
+            $("#site_id_input").change(function () {
+                site = getSiteInfo($("#site_id_input").val());
+                $("#site_sitename").val(site.sitename);
+                $("#site_area").val(site.area);
+                $("#site_altitude").val(site.altitude);
+                $("#site_sitetype").val(site.sitetype);
+                $("#site_status").val(site.status);
+            });
+
+            $("#update_site_but").click(function () {
+                sitename1 = $("#site_sitename").val();
+                area1 = $("#site_area").val();
+                altitude1 = $("#site_altitude").val();
+                sitetype1 =$("#site_sitetype").val();
+                status1 =$("#site_status").val();
+                // hourlyrate1 =$("#investigator_hourlyrate").val();
+
+                site_id = $("#site_id_input").val();
+                $.ajax({
+                    type: 'Put',
+                    dataType: 'JSON',
+                    url: 'https://nzwetland.herokuapp.com/api/site/'+site_id+'/',
+                    data: {
+                        id: site_id,
+                        sitename: sitename1,
+                        area: area1,
+                        altitude: altitude1,
+                        sitetype: sitetype1,
+                        status: status1,
+                        // HourlyRate: hourlyrate1,
+                    },
+                    success: function (data) {
+                        alert("Site updated successfully")
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                });
+            });
+
 
 
         });
+
+
+
+
+
+
+
     </script>
+
 </head>
 <body>
 <form onsubmit ="return false">
@@ -172,7 +119,7 @@
         <p> <label>Status:</label><td ><input id = "site_status" type = "text" maxlength="16" size="16"></p>
 <!--        <p> <label>Investigator Hourly Rate:</label><input id = "investigator_hourlyrate" type = "number" maxlength="5" size="5"></p>-->
 
-        <button type="button" id="update_site_but">Update Investigator</button>
+        <button type="button" id="update_site_but" >Update Investigator</button>
         <button type="button" ><a href="mainMenuBigEye.html"> Return</a></button>
         <p></p>
     </div>

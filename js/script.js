@@ -48,3 +48,49 @@ function getClientInfo(clientID){
     return client;
 
 }
+
+/**
+ * @name getSiteInfo
+ * @param site_id
+ * @returns site object
+ */
+function getSiteInfo (site_id) {
+    site = '';
+    $.ajax({
+        type: 'Get',
+        dataType: 'JSON',
+        async: false,
+        url: 'https://nzwetland.herokuapp.com/api/site/'+site_id,
+        success: function (data) {
+            // location.reload();
+            site = data;
+
+            // var departmentID = data.department;
+
+            console.log(data);
+
+        },
+
+        error: function (err) {
+            console.log(err);
+        }
+    });
+    return site;
+}
+
+function getAllSites() {
+    sites = [];
+    $.ajax({
+        type: 'Get',
+        dataType: 'JSON',
+        async:false,
+        url: 'https://nzwetland.herokuapp.com/api/site/',
+        success: function (data) {
+            sites = data;
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+    return sites;
+}
