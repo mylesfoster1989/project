@@ -61,8 +61,16 @@
                     alert("Not connected");
                 }
             });
+            $("#display_report").click(function () {
+                $("#sites").show();
+
+            })
         });
 
+       windows.onload = function ()
+       {
+           $("#sites").hide();
+       }
         function back() {
             window.history.back();
         }
@@ -74,10 +82,10 @@
     <div class="center">
         <h1>Site Report</h1>
         <div class="center_button">
-            <button type="button" style="width: 250px"><a href=""> Produce Site Report</a></button>
-            <button type="button" onclick="back()">Return</button>
+            <button type="button" style="width: 250px"><a id="display_report" href=""> Display Site Report</a></button>
+            <button type="button"><a href="mainMenuBigEye.html"> Return</a></button>
         </div>
-        <div id="sites"></div>
+        <div id="sites" style="display: none"></div>
     </div>
 </form>
 </body>
