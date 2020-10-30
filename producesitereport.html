@@ -40,6 +40,8 @@
         }
 
         $(document).ready(function () {
+
+            $("#sites").hide();
             $.ajax({
                 type: 'GET',
                 url: "https://nzwetland.herokuapp.com/api/site/",
@@ -67,10 +69,7 @@
             })
         });
 
-       windows.onload = function ()
-       {
-           $("#sites").hide();
-       }
+
         function back() {
             window.history.back();
         }
@@ -82,7 +81,7 @@
     <div class="center">
         <h1>Site Report</h1>
         <div class="center_button">
-            <button type="button" style="width: 250px"><a id="display_report" href=""> Display Site Report</a></button>
+            <button type="button" style="width: 250px" id="display_report"> Display Site Report</button>
             <button type="button"><a href="mainMenuBigEye.html"> Return</a></button>
         </div>
         <div id="sites" style="display: none"></div>
