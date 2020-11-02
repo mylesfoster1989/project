@@ -115,11 +115,25 @@
         <p> <label>Site Name:</label><input id = "site_sitename" type = "text" maxlength="30" size="30"></p>
         <p> <label>Area:</label><input id = "site_area" type = "text" maxlength="30" size="30"></p>
         <p> <label>Altitude:</label><input id = "site_altitude" type = "number" maxlength="50" size="50"></p>
-        <p> <label>Site Type:</label><input id = "site_sitetype" type = "text" maxlength="20" size="20"></p>
-        <p> <label>Status:</label><td ><input id = "site_status" type = "text" maxlength="16" size="16"></p>
+        <p> <label>Site Type:</label><select id = "site_sitetype"></p>
+        <option>Strict Nature Reserve</option>
+        <option>National Park</option>
+        <option>Wildlife Reserve</option>
+        <option>State Reserve</option>
+        <option>Hunting Reserve</option>
+        </select></p>
+        <p id = "sitetype_input_err"></p>
+
+        <p> <label>Status:</label><td ><select id = "site_status"></p>
+        <option>Normal</option>
+        <option>Threatend</option>
+
+        </select></p>
+        <p id = "status_input_err"></p>
+
 <!--        <p> <label>Investigator Hourly Rate:</label><input id = "investigator_hourlyrate" type = "number" maxlength="5" size="5"></p>-->
 
-        <button type="button" id="update_site_but" >Update Investigator</button>
+        <button type="button" id="update_site_but" >Update Site</button>
         <button type="button" ><a href="mainMenuBigEye.html"> Return</a></button>
         <p></p>
     </div>
