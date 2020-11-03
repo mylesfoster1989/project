@@ -4,34 +4,92 @@
     <meta charset="UTF-8">
     <title>Add Site</title>
     <style type="text/css">
-        button {
-            width: 20%;
-            height: 10%;
-        }
         body{
-            font-family: "Arial";
+            background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
 
-        .center{
-            margin: auto;
-            width: 60%;
-            border: 3px solid #73AD21;
+        .container {
+            border-radius: 70px;
+            padding: 5%;
+            margin: 5%;
+            width: fit-content;
+            height: 50%;
+            border: black;
+            margin-right: auto;
+            margin-left: auto;
+            background: linear-gradient(to right, darkseagreen, darkolivegreen);
+            box-shadow: 0 0 20px 9px darkolivegreen;
+        }
+
+
+        button {
+            font-family: "Bookman Old Style";
+            width: 220px;
+            margin: 5px;
             padding: 10px;
+            height: 100%;
+            background: linear-gradient(to right, whitesmoke, darkseagreen);
+            border-radius: 20px;
+            transition: .5s;
+            margin-right: auto;
+            margin-left: auto;
+            box-shadow: 0 0 20px 9px darkolivegreen;
+        }
+        div{
+
+            border-radius: 30px;
+            margin: 10px;
+            padding:10px;
+            width: 100%;
+            height: 100%;
+        }
+        td{
+            font-size: large;
+            font-family: "Bookman Old Style";
+            width: 120px;
+            margin: 20px;
+            padding: 10px;
+            height: 100%;
+            border-radius: 20px;
+
         }
 
+
+        select{
+            border-radius: 30px;
+            height: 30px;
+            width: 60%;
+        }
+
+
+        input{
+            text-align: center;
+            font-size: large;
+            margin: 10px;
+            padding: 10px;
+            width: 220px;
+            height: 10px;
+            border-radius: 30px;
+            transition: .5s;
+            font-family: "Bookman Old Style";
+        }
         h1{
+            font-size: xx-large;
+            font-family: "Bookman Old Style";
             text-align: center;
         }
-
         label{
-            text-align: right;
-            width: 140px;
-            display: block;
-            float: left;
-            clear: left;
-            margin-right: 3px;
-            cursor: pointer;
+            font-size: large;
+            font-family: "Bookman Old Style";
+            text-align: center;
+
         }
+
+
+
     </style>
 
     <script
@@ -83,11 +141,12 @@
     </script>
 </head>
 <body>
+<div class="container">
+<h1>Add a Site</h1>
 <form onsubmit="return false">
-    <div class="center">
-        <h1>Add a Site
-        </h1>
-        <tr></tr>
+    <div class="center"style="background-color: olive">
+
+        <table>
         <p><label>Site Name: </label><input id="sitename_input" type="text" maxlength="30" size="30"></p>
         <p id = "sitename_input_err"></p>
         <p><label>Area: </label><input id="area_input" type="number" maxlength="30" size="30"></p>
@@ -110,9 +169,12 @@
         </select></p>
         <p id = "status_input_err"></p>
 
-        <button type="button" id="add_site_but">Add Site</button>
-        <button type="button"><a href="mainMenuBigEye.html"> Return</a></button>
-        <p></p>
+        </table>
     </div>
 </form>
+<div>
+    <div class="center_button" style="text-align: center">
+<button type="button" id="add_site_but">Add Site</button>
+<button type="button"><a href="mainMenuBigEye.html"> Return</a></button>
+</div>
 </body>

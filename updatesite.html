@@ -4,34 +4,88 @@
     <meta charset="UTF-8">
     <title>Update Site</title>
     <style type="text/css">
-        button {
-            width: 20%;
-            height: 10%;
-        }
         body{
-            font-family: "Arial";
+            background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
 
-        .center{
-            margin: auto;
-            width: 60%;
-            border: 3px solid palevioletred;
+        .container {
+            border-radius: 70px;
+            padding: 5%;
+            margin: 5%;
+            width: fit-content;
+            height: 50%;
+            border: black;
+            margin-right: auto;
+            margin-left: auto;
+            background: linear-gradient(to right, darkseagreen, darkolivegreen);
+        }
+
+
+        button {
+            font-family: "Bookman Old Style";
+            width: 220px;
+            margin: 5px;
             padding: 10px;
+            height: 100%;
+            background: linear-gradient(to right, whitesmoke, darkseagreen);
+            border-radius: 20px;
+            transition: .5s;
+            box-shadow: 0 0 20px 9px darkolivegreen;
+        }
+        div{
+
+            border-radius: 50px;
+            margin: 10px;
+            padding:10px;
+            width: fit-content;
+            height: 100%;
+        }
+        td{
+            font-size: large;
+            font-family: "Bookman Old Style";
+            width: fit-content;
+            margin: 20px;
+            padding: 10px;
+            height: fit-content;
+            border-radius: 20px;
+
         }
 
+
+        select{
+            border-radius: 30px;
+            height: 30px;
+            width: 60%;
+        }
+
+
+        input{
+            text-align: center;
+            font-size: large;
+            margin: 30px;
+            padding: 20px;
+            width: 220px;
+            height: 20px;
+            border-radius: 30px;
+            transition: .5s;
+            font-family: "Bookman Old Style";
+        }
         h1{
+            font-size: xx-large;
+            font-family: "Bookman Old Style";
             text-align: center;
         }
-
         label{
-            text-align: right;
-            width: 140px;
-            display: block;
-            float: left;
-            clear: left;
-            margin-right: 3px;
-            cursor: pointer;
+            font-size: large;
+            font-family: "Bookman Old Style";
+            text-align: center;
+
         }
+
+
     </style>
     <script
             src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -64,7 +118,7 @@
                 altitude1 = $("#site_altitude").val();
                 sitetype1 =$("#site_sitetype").val();
                 status1 =$("#site_status").val();
-                // hourlyrate1 =$("#investigator_hourlyrate").val();
+
 
                 site_id = $("#site_id_input").val();
                 $.ajax({
@@ -103,10 +157,13 @@
 
 </head>
 <body>
+<div class="container">
+    <h1>Update a site</h1>
 <form onsubmit ="return false">
-    <div class="center">
-        <h1>Update a site</h1>
-        <hr>
+    <div class="center"style="background-color: olive">
+
+
+
         <p><label> Site: </label>
             <select id="site_id_input">
                 <option value = "">Select one</option>
@@ -131,12 +188,12 @@
         </select></p>
         <p id = "status_input_err"></p>
 
-<!--        <p> <label>Investigator Hourly Rate:</label><input id = "investigator_hourlyrate" type = "number" maxlength="5" size="5"></p>-->
 
-        <button type="button" id="update_site_but" >Update Site</button>
-        <button type="button" ><a href="mainMenuBigEye.html"> Return</a></button>
-        <p></p>
     </div>
 </form>
+    <div class="center_button" style="text-align: center">
+    <button type="button" id="update_site_but" >Update Site</button>
+    <button type="button" ><a href="mainMenuBigEye.html"> Return</a></button>
+
 </body>
 </html>
