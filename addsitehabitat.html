@@ -4,77 +4,79 @@
     <meta charset="UTF-8">
     <title>Add Site Habitat</title>
     <style type="text/css">
-        body{
+        body {
             background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
         }
 
-
-
-
-        button {
-            font-family: "Bookman Old Style";
-            width: 320px;
-            margin: 30px auto;
-            padding: 20px;
-            height: 100%;
-            background: linear-gradient(to right, whitesmoke, olive);
-            border-radius: 20px;
-            transition: .5s;
-            background-position: center;
+        .container {
+            border-radius: 70px;
+            padding: 5%;
+            margin: 5%;
+            width: fit-content;
+            height: 50%;
+            border: black;
+            margin-right: auto;
+            margin-left: auto;
+            background: linear-gradient(to right, darkseagreen, darkolivegreen);
             box-shadow: 0 0 20px 9px darkolivegreen;
-
-
-
-
         }
-        div{
+
+
+        div {
 
             border-radius: 30px;
             margin: 10px;
-            padding:10px;
-            width:fit-content;
-            height: fit-content;
-
+            padding: 10px;
+            width: 100%;
+            height: 100%;
         }
-        td{
+
+        td {
             font-size: large;
             font-family: "Bookman Old Style";
-            width: fit-content;
+            width: 120px;
             margin: 20px;
             padding: 10px;
             height: 100%;
             border-radius: 20px;
 
         }
-        select{
+
+
+        select {
             border-radius: 30px;
             height: 30px;
-            width: 100%;
+            width: 60%;
         }
 
 
-        input{
+        input {
             text-align: center;
             font-size: large;
-
-            margin: 15px;
-            padding: 15px;
-            width:170px;
-            height: fit-content;
+            margin: 10px;
+            padding: 10px;
+            width: 220px;
+            height: 10px;
             border-radius: 30px;
             transition: .5s;
             font-family: "Bookman Old Style";
         }
-        h1{
+
+        h1 {
             font-size: xx-large;
             font-family: "Bookman Old Style";
             text-align: center;
         }
 
+        label {
+            font-size: large;
+            font-family: "Bookman Old Style";
+            text-align: center;
 
+        }
 
 
     </style>
@@ -89,7 +91,7 @@
                 type: 'Get',
                 dataType: 'JSON',
                 url: 'https://nzwetland.herokuapp.com/api/site/',
-                success: function(data) {
+                success: function (data) {
                     // location.reload();
                     console.log(data);
                     i = 0;
@@ -99,12 +101,12 @@
                         i = i + 1;
                     }
 
-                    $("#site_id_input").change(function() {
+                    $("#site_id_input").change(function () {
                         siteID = $("#site_id_input").val()
                         getSiteInfo(siteID);
                     });
                 },
-                error: function(err) {
+                error: function (err) {
                     console.log(err);
                 }
             });
@@ -114,14 +116,14 @@
                     type: 'Get',
                     dataType: 'JSON',
                     url: 'https://nzwetland.herokuapp.com/api/site/' + SiteID,
-                    success: function(data) {
+                    success: function (data) {
                         // location.reload();
                         $("#site_id").val(data.id);
                         $("#site_name").val(data.sitename);
                         $("#site_status").val(data.status);
                         console.log(data);
                     },
-                    error: function(err) {
+                    error: function (err) {
                         console.log(err);
                     }
                 });
@@ -133,11 +135,11 @@
                     dataType: 'JSON',
                     async: false,
                     url: 'https://nzwetland.herokuapp.com/api/habitat/' + habitatID + '/',
-                    success: function(data) {
+                    success: function (data) {
                         // location.reload();
                         habitat = data;
                     },
-                    error: function(err) {
+                    error: function (err) {
                         console.log(err);
                     }
                 });
@@ -149,8 +151,8 @@
                 dataType: 'JSON',
                 url: 'https://nzwetland.herokuapp.com/api/Sitehabitat/',
                 async: true,
-                success: function(data) {
-                    $("#site_id_input").change(function() {
+                success: function (data) {
+                    $("#site_id_input").change(function () {
                         i = 0;
                         while (i < data.length) {
                             sitehabitat = data[i];
@@ -161,7 +163,7 @@
                     });
 
                 },
-                error: function(err) {
+                error: function (err) {
                     console.log(err);
                 }
             });
@@ -171,8 +173,8 @@
                 dataType: 'JSON',
                 url: 'https://nzwetland.herokuapp.com/api/habitat/',
                 async: true,
-                success: function(data) {
-                    $("#site_id_input").change(function() {
+                success: function (data) {
+                    $("#site_id_input").change(function () {
                         i = 0;
                         while (i < data.length) {
                             habitat = data[i];
@@ -180,14 +182,14 @@
                             i = i + 1;
                         }
 
-                        $("#habitat_id_input").change(function() {
+                        $("#habitat_id_input").change(function () {
                             habitatID = $("#habitat_id_input").val()
                             getHabitatInformation(habitatID);
                         });
 
                     });
                 },
-                error: function(err) {
+                error: function (err) {
                     console.log(err);
                 }
             });
@@ -197,14 +199,14 @@
                     type: 'Get',
                     dataType: 'JSON',
                     url: 'https://nzwetland.herokuapp.com/api/habitat/' + habitatID,
-                    success: function(data) {
+                    success: function (data) {
                         // location.reload();
                         $("#habitat_id").val(data.id);
                         $("#habitat_description").val(data.description);
                         $("#habitat_type").val(data.habitattype);
                         console.log(data);
                     },
-                    error: function(err) {
+                    error: function (err) {
                         console.log(err);
                     }
                 });
@@ -243,7 +245,7 @@
             }
         });
 
-        window.onload = function() {
+        window.onload = function () {
             $("#site_id").val('');
             $("#site_name").val('');
             $("#site_status").val('');
@@ -254,64 +256,117 @@
             $("#sitehabitat_area").val('');
         }
     </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav id="nav">
+    <ul id="navigation">
+        <li><a href="mainmenu.html" class="first">Main Menu</a></li>
+        <li><a href="#">Site &raquo;</a>
+            <ul>
+                <li><a href="addsite.html">Add Site</a></li>
+                <li><a href="updatesite.html">Update Site</a></li>
+                <li><a href="deletesite.html">Delete Site</a>
+                <li><a href="producesitereport.html">Produce Site Reports</a></li>
+
+            </ul>
+        </li>
+        <li><a href="#">Site Habitat &raquo;</a>
+            <ul>
+                <li><a href="addsitehabitat.html">Add Site Habitat</a></li>
+                <li><a href="removesitehabitat.html">Remove Site Habitat</a></li>
+                <li><a href="producesitehabitat.html">Produce Site Habitat Report</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Habitat &raquo; </a>
+            <ul>
+                <li><a href="addhabitat.html">Add Habitat</a></li>
+                <li><a href="updatehabitat.html">Update Habitat</a></li>
+                <li><a href="deletehabitat.html">Delete Habitat </a></li>
+                <li><a href="producehabitat.html">Produce Habitat Report </a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Landuse &raquo; </a>
+            <ul>
+                <li><a href="assignlanduse.html">Assign Landuse</a></li>
+                <li><a href="removelanduse.html">Remove Landuse</a></li>
+                <li><a href="addlanduse.html">Add Landuse</a></li>
+                <li><a href="updatelanduse.html">Update Landuse</a></li>
+                <li><a href="deletelanduse.html">Delete Landuse</a></li>
+                <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
+            </ul>
+        </li>
+
+
+    </ul>
+</nav>
+<br><br>
 
 <div class="container">
     <h1>Add a Site Habitat</h1>
-<form onsubmit="return false">
-    <div class="container" style="background-color: olive">
+    <form onsubmit="return false">
+        <div class="container" style="background-color: olive">
 
-        <table>
-        <p><label>Sites: </label>
-            <select id="site_id_input">
-                <option value="">Select One</option>
-            </select>
-        </p>
-        <p><label>Site ID: </label><input disabled id="site_id" type="text" maxlength="10" size="10"></p>
-        <p><label>Site Name: </label><input disabled id="site_name" type="text" maxlength="30" size="30"></p>
-        <p><label>Site Status: </label><input disabled id="site_status" type="text" maxlength="30" size="30"></p>
-        </table>
-    </div>
+            <table>
+                <p><label>Sites: </label>
+                    <select id="site_id_input">
+                        <option value="">Select One</option>
+                    </select>
+                </p>
+                <p><label>Site ID: </label><input disabled id="site_id" type="text" maxlength="10" size="10"></p>
+                <p><label>Site Name: </label><input disabled id="site_name" type="text" maxlength="30" size="30"></p>
+                <p><label>Site Status: </label><input disabled id="site_status" type="text" maxlength="30" size="30">
+                </p>
+            </table>
+        </div>
 
-    <div class="container" style="margin-top: 20px;background-color: olivedrab">
-        <table>
-        <p><label>Site Habitats: </label>
-            <select id="sitehabitat_id_input">
-                <option value="">Select One</option>
-            </select>
-        </p>
-        </table>
-    </div>
+        <div class="container" style="margin-top: 20px;background-color: olivedrab">
+            <table>
+                <p><label>Site Habitats: </label>
+                    <select id="sitehabitat_id_input">
+                        <option value="">Select One</option>
+                    </select>
+                </p>
+            </table>
+        </div>
 
-    <div class="container" style="margin-top: 20px;background-color: darkolivegreen">
-        <table>
-        <p><label>Habitats: </label>
-            <select id="habitat_id_input">
-                <option value="">Select One</option>
-            </select>
-            <p/>
-        </table>
-    </div>
+        <div class="container" style="margin-top: 20px;background-color: darkolivegreen">
+            <table>
+                <p><label>Habitats: </label>
+                    <select id="habitat_id_input">
+                        <option value="">Select One</option>
+                    </select>
+                <p/>
+            </table>
+        </div>
 
-    <div style="margin-top: 20px;background-color: seagreen">
-        <table>
-        </p>
-        <p><label>Habitat ID: </label><input disabled id="habitat_id" type="text" maxlength="10" size="10"></p>
-        <p><label>Habitat Description: </label><input disabled id="habitat_description" type="text" maxlength="40" size="40"></p>
-        <p><label>Habitat Type: </label><input disabled id="habitat_type" type="text" maxlength="30" size="30"></p>
-        </table>
-    </div>
+        <div style="margin-top: 20px;background-color: seagreen">
+            <table>
+                </p>
+                <p><label>Habitat ID: </label><input disabled id="habitat_id" type="text" maxlength="10" size="10"></p>
+                <p><label>Habitat Description: </label><input disabled id="habitat_description" type="text"
+                                                              maxlength="40" size="40"></p>
+                <p><label>Habitat Type: </label><input disabled id="habitat_type" type="text" maxlength="30" size="30">
+                </p>
+            </table>
+        </div>
 
-    <div style="margin-top: 20px;background-color: green">
-        <p><label>Site Habitat Name: </label><input id="sitehabitat_name" type="text" maxlength="30" size="30"></p>
-        <p><label>Site Habitat Area: </label><input id="sitehabitat_area" type="number" maxlength="30" size="30"></p>
-    </div>
+        <div style="margin-top: 20px;background-color: green">
+            <p><label>Site Habitat Name: </label><input id="sitehabitat_name" type="text" maxlength="30" size="30"></p>
+            <p><label>Site Habitat Area: </label><input id="sitehabitat_area" type="number" maxlength="30" size="30">
+            </p>
+        </div>
 
         <button type="button" id="add_sitehabitat_but">Add Site Habitat</button>
         <button type="button"><a href="mainMenuBigEye.html"> Return</a></button>
         <p></p>
 
 
-</form>
+    </form>
+</div>
+<div id="footer">
+    Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
+</div>
 </body>
+</html>

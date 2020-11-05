@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>jQuery Login</title>
+    <title>Login</title>
 
     <script
             src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -35,6 +35,7 @@
                 }
 
 
+
             } else {
                 $("#login").show();
                 $("#loggedin").hide();
@@ -52,27 +53,27 @@
 
             });
         });
-        $(document).ready(function () {
-            $("#login").click(function () {
-                switch ($("#username").val()) {
-                    case "mylesfoster1989":
-                        alert("Welcome Site Administrator");
-                        break;
-                    case "dass10":
-                        alert("Welcome Site Administator");
-                        break;
-                    case "dylan":
-                        alert("Public Relationship Clerk");
-                        break;
-                    case "locngo3003":
-                        alert("Welcome Surveys Officer");
-                        break;
-                    default:
-                        alert("Wrong Username or Password");
-                        location.reload();
-                }
-            })
-        });
+        // $(document).ready(function () {
+        //     $("#login").click(function () {
+        //         switch ($("#username").val()) {
+        //             case "mylesfoster1989":
+        //                 alert("Welcome Site Administrator");
+        //                 break;
+        //             case "dass10":
+        //                 alert("Welcome Site Administator");
+        //                 break;
+        //             case "dylan":
+        //                 alert("Public Relationship Clerk");
+        //                 break;
+        //             case "locngo3003":
+        //                 alert("Welcome Surveys Officer");
+        //                 break;
+        //             default:
+        //                 alert("Wrong Username or Password");
+        //                 location.reload();
+        //         }
+        //     })
+        // });
     </script>
     <link rel="stylesheet" href="style.css">
 
@@ -80,6 +81,7 @@
 <body><style type="text/css">
 
 </style>
+
 
 <h1>NZ Wetlands</h1>
 <hr>
@@ -107,7 +109,7 @@
     Nz Wetlands
 </div>
 <div id="footer">
-    &copy; Nz Wetlands, Unitec, NZ
+    Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
 </div>
 </body>
 </html>

@@ -103,13 +103,23 @@
                     });
 
                     $("#update_Habitat_Button").click(function() {
-                        habitatID = $("#habitat_Id_Input").val()
-                        updateHabitat(habitatID);
+                        if ($("#habitat_Id_Input").val() == ""){
+                            $("#habitats_input_err").text("You need to select a habitat");
+                        }else{
+                            habitatID = $("#habitat_Id_Input").val();
+                            updateHabitat(habitatID);
+                        }
+
                     });
 
                 },
                 error: function(err) {
                     console.log(err);
+                    errors = JSON.parse(err.responseText);
+                    console.log(errors);
+                    $("#habitats_input_err").text(errors.habitat);
+                    $("#description_input_err").text(errors.description);
+                    $("#type_input_err").text(errors.type);
                 }
             });
         });
@@ -128,6 +138,10 @@
                 },
                 error: function(err) {
                     console.log(err);
+                    console.log(err);
+                    errors = JSON.parse(err.responseText);
+                    console.log(errors);
+                    $("#habitats_input_err").text(errors.habitat);
                 }
             });
         }
@@ -151,11 +165,8 @@
                     console.log(err);
                     errors = JSON.parse(err.responseText);
                     console.log(errors);
-                    $("#habitat_Id_Input_err").val(errors.name);
                     $("#habitats_input_err").text(errors.habitat);
-                    $("#id_input_err").text(errors.id);
-                    $("#description_input_err").text(errors.description);
-                    $("#type_input_err").text(errors.type);
+
                 }
             });
         }
@@ -171,45 +182,95 @@
         }
     </script>
     <script src="js/script.js"></script>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+<nav id="nav">
+    <ul id="navigation">
+        <li><a href="mainmenu.html" class="first">Main Menu</a></li>
+        <li><a href="#">Site &raquo;</a>
+            <ul>
+                <li><a href="addsite.html">Add Site</a></li>
+                <li><a href="updatesite.html">Update Site</a></li>
+                <li><a href="deletesite.html">Delete Site</a>
+                <li><a href="producesitereport.html">Produce Site Reports</a></li>
+
+            </ul>
+        </li>
+        <li><a href="#">Site Habitat &raquo;</a>
+            <ul>
+                <li><a href="addsitehabitat.html">Add Site Habitat</a></li>
+                <li><a href="removesitehabitat.html">Remove Site Habitat</a></li>
+                <li><a href="producesitehabitat.html">Produce Site Habitat Report</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Habitat &raquo; </a>
+            <ul>
+                <li><a href="addhabitat.html">Add Habitat</a></li>
+                <li><a href="updatehabitat.html">Update Habitat</a></li>
+                <li><a href="deletehabitat.html">Delete Habitat </a></li>
+                <li><a href="producehabitat.html">Produce Habitat Report </a></li>
+            </ul></li>
+
+        <li><a href="#">Landuse &raquo; </a>
+            <ul>
+                <li><a href="assignlanduse.html">Assign Landuse</a></li>
+                <li><a href="removelanduse.html">Remove Landuse</a></li>
+                <li><a href="addlanduse.html">Add Landuse</a></li>
+                <li><a href="updatelanduse.html">Update Landuse</a></li>
+                <li><a href="deletelanduse.html">Delete Landuse</a></li>
+                <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
+            </ul></li>
+
+
+
+
+    </ul>
+</nav><br><br>
 <div class="container">
     <h1>Update Habitat</h1>
-<form onsubmit="return false">
-    <div class="center"style="background-color: olive">
+    <form onsubmit="return false">
+        <div class="center"style="background-color: olive">
 
-        <table>
-            <tr>
-                <td><label>Habitats:</label></td>
-                <td>
-                    <select id="habitat_Id_Input">
-                        <option value="">Select one</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>ID:</td>
-                <td><input disabled id="habitat_Id" type="text"></td>
-            </tr>
-            <tr>
-                <td>Description:</td>
-                <td><input id="habitat_Description" type="text" maxlength="40" size="40"></td>
-            </tr>
-            <tr>
-                <td>Type:</td>
-                <td><input id="habitat_Type" type="text" maxlength="10" size="10"></td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <td><label>Habitats:</label></td>
+                    <td>
+                        <select id="habitat_Id_Input">
+                            <option value="">Select one</option>
+                        </select>
+                    </td>
+
+                    <td id="habitats_input_err"></td>
+                </tr>
+                <tr>
+                    <td>ID:</td>
+                    <td><input disabled id="habitat_Id" type="text">
+
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td><input id="habitat_Description" type="text" maxlength="40" size="40"></td>
+                    <td id="description_input_err"></td>
+                </tr>
+                <tr>
+                    <td>Type:</td>
+                    <td><input id="habitat_Type" type="text" maxlength="10" size="10"></td>
+                </tr>
+            </table>
 
 
-    </div>
-</form>
+        </div>
+    </form>
     <div class="center_button" style="text-align: center">
         <button type="button" id="update_Habitat_Button">Update Habitat</button>
         <button type="button" onclick="back()">Return</button>
     </div>
+</div>
+<div id="footer">
+    Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
 </div>
 </body>
 </html>

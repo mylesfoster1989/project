@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Delete Site</title>
     <style type="text/css">
-        body{
+        body {
             background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -25,28 +25,16 @@
         }
 
 
-        button {
-            font-family: "Bookman Old Style";
-            width: 220px;
-            margin: 5px;
-            padding: 10px;
-            height: 100%;
-            background: linear-gradient(to right, whitesmoke, darkseagreen);
-            border-radius: 20px;
-            transition: .5s;
-            margin-right: auto;
-            margin-left: auto;
-            box-shadow: 0 0 20px 9px darkolivegreen;
-        }
-        div{
+        div {
 
             border-radius: 30px;
             margin: 10px;
-            padding:10px;
+            padding: 10px;
             width: 100%;
             height: 100%;
         }
-        td{
+
+        td {
             font-size: large;
             font-family: "Bookman Old Style";
             width: 120px;
@@ -58,14 +46,14 @@
         }
 
 
-        select{
+        select {
             border-radius: 30px;
             height: 30px;
             width: 60%;
         }
 
 
-        input{
+        input {
             text-align: center;
             font-size: large;
             margin: 10px;
@@ -76,12 +64,14 @@
             transition: .5s;
             font-family: "Bookman Old Style";
         }
-        h1{
+
+        h1 {
             font-size: xx-large;
             font-family: "Bookman Old Style";
             text-align: center;
         }
-        label{
+
+        label {
             font-size: large;
             font-family: "Bookman Old Style";
             text-align: center;
@@ -89,33 +79,33 @@
         }
 
 
-
     </style>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script>
         function getSiteHabitatInfo(sitehabitatID) {
             $.ajax({
                 type: 'Get',
                 dataType: 'JSON',
                 url: 'https://nzwetland.herokuapp.com/api/Sitehabitat/' + sitehabitatID + '/',
-                success: function(data) {
+                success: function (data) {
                     // location.reload();
                     sitehabitat = data;
                 },
-                error: function(err) {
+                error: function (err) {
                     console.log(err);
                 }
             });
             return sitehabitat;
         }
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             $.ajax({
                 type: 'Get',
                 dataType: 'JSON',
                 url: 'https://nzwetland.herokuapp.com/api/site/',
-                success: function(data) {
+                success: function (data) {
                     // location.reload();
                     console.log(data);
                     i = 0;
@@ -128,19 +118,19 @@
                         i = i + 1;
                     }
 
-                    $("#site_Id_Input").change(function() {
+                    $("#site_Id_Input").change(function () {
                         siteID = $("#site_Id_Input").val()
                         getSiteInfo(siteID);
                     });
 
-                    $("#delete_Site_Button").click(function() {
+                    $("#delete_Site_Button").click(function () {
                         siteID = $("#site_Id_Input").val()
                         deleteSite(siteID);
                     });
 
 
                 },
-                error: function(err) {
+                error: function (err) {
                     console.log(err);
                 }
             });
@@ -152,7 +142,7 @@
                 type: 'Get',
                 dataType: 'JSON',
                 url: 'https://nzwetland.herokuapp.com/api/site/' + SiteID,
-                success: function(data) {
+                success: function (data) {
                     // location.reload();
                     $("#site_Id").val(data.id);
                     $("#site_Name").val(data.sitename);
@@ -160,7 +150,7 @@
                     $("#site_Status").val(data.status);
                     console.log(data);
                 },
-                error: function(err) {
+                error: function (err) {
                     console.log(err);
                 }
             });
@@ -171,11 +161,11 @@
                 type: 'DELETE',
                 dataType: 'JSON',
                 url: 'https://nzwetland.herokuapp.com/api/site/' + SiteID,
-                success: function(data) {
+                success: function (data) {
                     alert('Site has been successfully deleted.');
                     location.reload();
                 },
-                error: function(err) {
+                error: function (err) {
                     console.log(err);
                     errors = JSON.parse(err.responseText);
                     console.log(errors);
@@ -188,55 +178,103 @@
             window.history.back();
         }
 
-        window.onload = function() {
+        window.onload = function () {
             $("#site_Id").val('');
             $("#site_Name").val('');
             $("#site_Type").val('');
             $("#site_Status").val('');
         }
     </script>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+<nav id="nav">
+    <ul id="navigation">
+        <li><a href="mainmenu.html" class="first">Main Menu</a></li>
+        <li><a href="#">Site &raquo;</a>
+            <ul>
+                <li><a href="addsite.html">Add Site</a></li>
+                <li><a href="updatesite.html">Update Site</a></li>
+                <li><a href="deletesite.html">Delete Site</a>
+                <li><a href="producesitereport.html">Produce Site Reports</a></li>
+
+            </ul>
+        </li>
+        <li><a href="#">Site Habitat &raquo;</a>
+            <ul>
+                <li><a href="addsitehabitat.html">Add Site Habitat</a></li>
+                <li><a href="removesitehabitat.html">Remove Site Habitat</a></li>
+                <li><a href="producesitehabitat.html">Produce Site Habitat Report</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Habitat &raquo; </a>
+            <ul>
+                <li><a href="addhabitat.html">Add Habitat</a></li>
+                <li><a href="updatehabitat.html">Update Habitat</a></li>
+                <li><a href="deletehabitat.html">Delete Habitat </a></li>
+                <li><a href="producehabitat.html">Produce Habitat Report </a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Landuse &raquo; </a>
+            <ul>
+                <li><a href="assignlanduse.html">Assign Landuse</a></li>
+                <li><a href="removelanduse.html">Remove Landuse</a></li>
+                <li><a href="addlanduse.html">Add Landuse</a></li>
+                <li><a href="updatelanduse.html">Update Landuse</a></li>
+                <li><a href="deletelanduse.html">Delete Landuse</a></li>
+                <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
+            </ul>
+        </li>
+
+
+    </ul>
+</nav>
+<br><br>
 <div class="container">
     <h1>Delete Site</h1>
-<form onsubmit="return false">
-    <div class="center"style="background-color: olive">
+    <form onsubmit="return false">
+        <div class="center" style="background-color: olive">
 
-        <table>
-            <tr>
-                <td><label>Sites:</label></td>
-                <td>
-                    <select id="site_Id_Input">
-                        <option value="">Select one</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>ID:</td>
-                <td><input disabled id="site_Id" type="text"></td>
-            </tr>
-            <tr>
-                <td>Description:</td>
-                <td><input disabled id="site_Name" type="text" maxlength="40" size="40"></td>
-            </tr>
-            <tr>
-                <td>Date:</td>
-                <td><input disabled id="site_Type" type="text"></td>
-            </tr>
-            <tr>
-                <td>Status:</td>
-                <td><input disabled id="site_Status" type="text" maxlength="8" size="8"></td>
-            </tr>
-        </table>
-        <div/>
+            <table>
+                <tr>
+                    <td><label>Sites:</label></td>
+                    <td>
+                        <select id="site_Id_Input">
+                            <option value="">Select one</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID:</td>
+                    <td><input disabled id="site_Id" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td><input disabled id="site_Name" type="text" maxlength="40" size="40"></td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td><input disabled id="site_Type" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Status:</td>
+                    <td><input disabled id="site_Status" type="text" maxlength="8" size="8"></td>
+                </tr>
+            </table>
+            </div>
 
 
-</form>
-<div class="center_button">
-    <button type="button" id="delete_Site_Button">Delete Site</button>
-    <button type="button" onclick="back()">Return</button>
+    </form>
+    <div class="center_button">
+        <button type="button" id="delete_Site_Button">Delete Site</button>
+        <button type="button" onclick="back()">Return</button>
+    </div>
+</div>
+<div id="footer">
+    Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
 </div>
 
 </body>
