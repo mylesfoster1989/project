@@ -4,27 +4,6 @@
     <meta charset="UTF-8">
     <title>Update Habitat</title>
     <style type="text/css">
-        body{
-            background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        .container {
-            border-radius: 70px;
-            padding: 5%;
-            margin: 5%;
-            width: fit-content;
-            height: 50%;
-            border: black;
-            margin-right: auto;
-            margin-left: auto;
-            background: linear-gradient(to right, darkseagreen, darkolivegreen);
-            box-shadow: 0 0 20px 9px darkolivegreen;
-        }
-
-
 
         div{
 
@@ -171,14 +150,59 @@
         }
     </script>
     <script src="js/script.js"></script>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+<nav id="nav">
+    <ul id="navigation">
+        <li><a href="mainmenu.html" class="first">Main Menu</a></li>
+        <li><a href="#">Site &raquo;</a>
+            <ul>
+                <li><a href="addsite.html">Add Site</a></li>
+                <li><a href="updatesite.html">Update Site</a></li>
+                <li><a href="deletesite.html">Delete Site</a>
+                <li><a href="producesitereport.html">Produce Site Reports</a></li>
+
+            </ul>
+        </li>
+        <li><a href="#">Site Habitat &raquo;</a>
+            <ul>
+                <li><a href="addsitehabitat.html">Add Site Habitat</a></li>
+                <li><a href="removesitehabitat.html">Remove Site Habitat</a></li>
+                <li><a href="producesitehabitat.html">Produce Site Habitat Report</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Habitat &raquo; </a>
+            <ul>
+                <li><a href="addhabitat.html">Add Habitat</a></li>
+                <li><a href="updatehabitat.html">Update Habitat</a></li>
+                <li><a href="deletehabitat.html">Delete Habitat </a></li>
+                <li><a href="producehabitat.html">Produce Habitat Report </a></li>
+            </ul></li>
+
+        <li><a href="#">Landuse &raquo; </a>
+            <ul>
+                <li><a href="assignlanduse.html">Assign Landuse</a></li>
+                <li><a href="removelanduse.html">Remove Landuse</a></li>
+                <li><a href="addlanduse.html">Add Landuse</a></li>
+                <li><a href="updatelanduse.html">Update Landuse</a></li>
+                <li><a href="deletelanduse.html">Delete Landuse</a></li>
+                <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
+            </ul></li>
+        <button id="logoutBut" >Log out</button>
+
+
+
+
+    </ul>
+</nav><br><br>
 <div class="container">
     <h1>Update Habitat</h1>
+    <hr>
 <form onsubmit="return false">
-    <div class="center"style="background-color: olive">
+    <div class="center"style="background-color: whitesmoke, darkolivegreen">
 
         <table>
             <tr>
@@ -210,6 +234,9 @@
         <button type="button" id="update_Habitat_Button">Update Habitat</button>
         <button type="button" onclick="back()">Return</button>
     </div>
+</div>
+<div id="footer">
+    Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
 </div>
 </body>
 </html>

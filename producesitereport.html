@@ -4,34 +4,30 @@
     <meta charset="UTF-8">
     <title>Site Report</title>
     <style type="text/css">
-        body{
-            background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-
 
         button {
             font-family: "Bookman Old Style";
-            text-align: center;
-            width: 270px;
-            margin: 50px;
-            padding: 5px;
-            height: fit-content;
+            width: 150px;
+            margin: 10px;
+            padding: 10px;
+            height: 80%;
             background: linear-gradient(to right, whitesmoke, olive);
             border-radius: 20px;
             transition: .5s;
             box-shadow: 0 0 20px 9px darkolivegreen;
         }
-        div{
-            border-radius: 20px;
 
+        #site_report{
+            border-radius: 30px;
             font-family: "Bookman Old Style";
-            background: linear-gradient(to right, darkseagreen, darkolivegreen);
+            background: linear-gradient(to right, darkseagreen,whitesmoke);
             box-shadow: 0 0 20px 9px olive;
+            margin: auto;
+            width: fit-content;
+            display: flow;
+            text-align: center;
         }
+
         td{
             font-size: large;
             font-family: "Bookman Old Style";
@@ -42,7 +38,14 @@
             border-radius: 20px;
 
         }
+        div{
 
+            border-radius: 30px;
+            margin: 10px;
+            padding:80px;
+            width: 100%;
+            height: 200%;
+        }
 
 
 
@@ -82,7 +85,7 @@
                                     " altitude : "+ sites[k].altitude+"<br>"+
                                     " site type : "+ sites[k].sitetype+"<br>"+
                                     " status : "+ sites[k].status+"<br>"
-                                   
+
                                 );
                                 k = k + 1;
                             }
@@ -203,22 +206,30 @@
                 <li><a href="updatelanduse.html">Update Landuse</a></li>
                 <li><a href="deletelanduse.html">Delete Landuse</a></li>
                 <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
-            </ul>
-        </li>
+            </ul></li>
 
-
+        <button id="logoutBut" >Log out</button>
     </ul>
-</nav>
+</nav><br><br><br><br><br>
 
-<div>
 
+
+    <div id="site_report" style="width: 100px;width: 700px;background-color: whitesmoke ">
+        <h1> Produce Site Report</h1>
+        <hr>
 <button id="show_report">Display Site report</button>
-<button >RETURN</a></button>
-<div id = "site_report" style="width: 100px;width: 1000px;background-color: aqua">
-</div>
+    <button type="button" ><a href="mainMenu.html"> Return</a></button>
+
+        </div>
+
+
+
+
+<div></div>
+<div></div>
 <div id="footer">
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
-</div>
+
 </div>
 </body>
 </html>

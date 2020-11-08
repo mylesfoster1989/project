@@ -4,37 +4,15 @@
     <meta charset="UTF-8">
     <title>Add Site Habitat</title>
     <style type="text/css">
-        body {
-            background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        .container {
-            border-radius: 70px;
-            padding: 5%;
-            margin: 5%;
-            width: fit-content;
-            height: 50%;
-            border: black;
-            margin-right: auto;
-            margin-left: auto;
-            background: linear-gradient(to right, darkseagreen, darkolivegreen);
-            box-shadow: 0 0 20px 9px darkolivegreen;
-        }
-
-
-        div {
+        div{
 
             border-radius: 30px;
             margin: 10px;
-            padding: 10px;
+            padding:10px;
             width: 100%;
             height: 100%;
         }
-
-        td {
+        td{
             font-size: large;
             font-family: "Bookman Old Style";
             width: 120px;
@@ -46,14 +24,14 @@
         }
 
 
-        select {
+        select{
             border-radius: 30px;
             height: 30px;
             width: 60%;
         }
 
 
-        input {
+        input{
             text-align: center;
             font-size: large;
             margin: 10px;
@@ -64,14 +42,12 @@
             transition: .5s;
             font-family: "Bookman Old Style";
         }
-
-        h1 {
+        h1{
             font-size: xx-large;
             font-family: "Bookman Old Style";
             text-align: center;
         }
-
-        label {
+        label{
             font-size: large;
             font-family: "Bookman Old Style";
             text-align: center;
@@ -297,16 +273,18 @@
                 <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
             </ul>
         </li>
-
+        <button id="logoutBut" >Log out</button>
 
     </ul>
 </nav>
 <br><br>
 
 <div class="container">
+    <div>
     <h1>Add a Site Habitat</h1>
+    </div>
     <form onsubmit="return false">
-        <div class="container" style="background-color: olive">
+
 
             <table>
                 <p><label>Sites: </label>
@@ -319,9 +297,7 @@
                 <p><label>Site Status: </label><input disabled id="site_status" type="text" maxlength="30" size="30">
                 </p>
             </table>
-        </div>
-
-        <div class="container" style="margin-top: 20px;background-color: olivedrab">
+        <hr>
             <table>
                 <p><label>Site Habitats: </label>
                     <select id="sitehabitat_id_input">
@@ -329,20 +305,15 @@
                     </select>
                 </p>
             </table>
-        </div>
-
-        <div class="container" style="margin-top: 20px;background-color: darkolivegreen">
+     <hr>
             <table>
                 <p><label>Habitats: </label>
                     <select id="habitat_id_input">
                         <option value="">Select One</option>
                     </select>
-                <p/>
-            </table>
-        </div>
+                </p></table>
+        <hr>
 
-        <div style="margin-top: 20px;background-color: seagreen">
-            <table>
                 </p>
                 <p><label>Habitat ID: </label><input disabled id="habitat_id" type="text" maxlength="10" size="10"></p>
                 <p><label>Habitat Description: </label><input disabled id="habitat_description" type="text"
@@ -350,16 +321,20 @@
                 <p><label>Habitat Type: </label><input disabled id="habitat_type" type="text" maxlength="30" size="30">
                 </p>
             </table>
-        </div>
-
-        <div style="margin-top: 20px;background-color: green">
+   <hr>
+            <table>
             <p><label>Site Habitat Name: </label><input id="sitehabitat_name" type="text" maxlength="30" size="30"></p>
             <p><label>Site Habitat Area: </label><input id="sitehabitat_area" type="number" maxlength="30" size="30">
             </p>
-        </div>
+            </table>
+      <hr>
 
+        <div class="center_button" style="text-align: center">
+            <table>
         <button type="button" id="add_sitehabitat_but">Add Site Habitat</button>
         <button type="button"><a href="mainMenuBigEye.html"> Return</a></button>
+            </table>
+        </div>
         <p></p>
 
 

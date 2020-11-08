@@ -3,6 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Site</title>
+    <style type="text/css">
+
+        div{
+
+            border-radius: 30px;
+            margin: 10px;
+            padding:10px;
+            width: 100%;
+            height: 100%;
+        }
+        td{
+            font-size: large;
+            font-family: "Bookman Old Style";
+            width: 120px;
+            margin: 20px;
+            padding: 10px;
+            height: 100%;
+            border-radius: 20px;
+
+        }
+
+
+        select{
+            border-radius: 30px;
+            height: 30px;
+            width: 60%;
+        }
+
+
+        input{
+            text-align: center;
+            font-size: large;
+            margin: 10px;
+            padding: 10px;
+            width: 220px;
+            height: 10px;
+            border-radius: 30px;
+            transition: .5s;
+            font-family: "Bookman Old Style";
+        }
+        h1{
+            font-size: xx-large;
+            font-family: "Bookman Old Style";
+            text-align: center;
+        }
+        label{
+            font-size: large;
+            font-family: "Bookman Old Style";
+            text-align: center;
+
+        }
+
+
+
+    </style>
 
 
     <script
@@ -54,7 +109,7 @@
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="page1">
+<body id="page34">
 <nav id="nav">
     <ul id="navigation">
         <li><a href="mainmenu.html" class="first">Main Menu</a></li>
@@ -78,31 +133,32 @@
             <ul>
                 <li><a href="addhabitat.html">Add Habitat</a></li>
                 <li><a href="updatehabitat.html">Update Habitat</a></li>
-                <li><a href="deletehabitat.html">Delete Habitat </a></li>
+                <li><a href="nzwetland1-origin-SHWETA/deletehabitat.html">Delete Habitat </a></li>
                 <li><a href="producehabitat.html">Produce Habitat Report </a></li>
             </ul>
         </li>
 
         <li><a href="#">Landuse &raquo; </a>
             <ul>
-                <li><a href="assignlanduse.html">Assign Landuse</a></li>
-                <li><a href="removelanduse.html">Remove Landuse</a></li>
-                <li><a href="addlanduse.html">Add Landuse</a></li>
-                <li><a href="updatelanduse.html">Update Landuse</a></li>
-                <li><a href="deletelanduse.html">Delete Landuse</a></li>
+                <li><a href="nzwetland1-origin-SHWETA/assignlanduse.html">Assign Landuse</a></li>
+                <li><a href="nzwetland1-origin-SHWETA/removelanduse.html">Remove Landuse</a></li>
+                <li><a href="nzwetland1-origin-SHWETA/addlanduse.html">Add Landuse</a></li>
+                <li><a href="nzwetland1-origin-SHWETA/updatelanduse.html">Update Landuse</a></li>
+                <li><a href="nzwetland1-origin-SHWETA/deletelanduse.html">Delete Landuse</a></li>
                 <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
             </ul>
         </li>
 
-
+        <button id="logoutBut" >Log out</button>
     </ul>
 </nav>
 <br><br>
 
 <div class="container">
     <h1>Add a Site</h1>
+    <hr>
     <form onsubmit="return false">
-        <div class="center" style="background-color: olive">
+        <div class="center" style="background-color: whitesmoke, darkolivegreen">
 
             <table>
                 <p><label>Site Name: </label><input id="sitename_input" type="text" maxlength="30" size="30"></p>
@@ -137,6 +193,7 @@
 
 </div>
 <div id="footer">
+
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
 </div>
 </body>

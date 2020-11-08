@@ -4,37 +4,15 @@
     <meta charset="UTF-8">
     <title>Delete Site</title>
     <style type="text/css">
-        body {
-            background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        .container {
-            border-radius: 70px;
-            padding: 5%;
-            margin: 5%;
-            width: fit-content;
-            height: 50%;
-            border: black;
-            margin-right: auto;
-            margin-left: auto;
-            background: linear-gradient(to right, darkseagreen, darkolivegreen);
-            box-shadow: 0 0 20px 9px darkolivegreen;
-        }
-
-
-        div {
+        div{
 
             border-radius: 30px;
             margin: 10px;
-            padding: 10px;
+            padding:10px;
             width: 100%;
             height: 100%;
         }
-
-        td {
+        td{
             font-size: large;
             font-family: "Bookman Old Style";
             width: 120px;
@@ -46,14 +24,14 @@
         }
 
 
-        select {
+        select{
             border-radius: 30px;
             height: 30px;
             width: 60%;
         }
 
 
-        input {
+        input{
             text-align: center;
             font-size: large;
             margin: 10px;
@@ -64,19 +42,18 @@
             transition: .5s;
             font-family: "Bookman Old Style";
         }
-
-        h1 {
+        h1{
             font-size: xx-large;
             font-family: "Bookman Old Style";
             text-align: center;
         }
-
-        label {
+        label{
             font-size: large;
             font-family: "Bookman Old Style";
             text-align: center;
 
         }
+
 
 
     </style>
@@ -229,14 +206,15 @@
             </ul>
         </li>
 
-
+        <button id="logoutBut" >Log out</button>
     </ul>
 </nav>
 <br><br>
 <div class="container">
     <h1>Delete Site</h1>
+    <hr>
     <form onsubmit="return false">
-        <div class="center" style="background-color: olive">
+        <div class="center" style="background-color: whitesmoke, darkolivegreen">
 
             <table>
                 <tr>
@@ -268,7 +246,7 @@
 
 
     </form>
-    <div class="center_button">
+    <div class="center_button" style="text-align: center">
         <button type="button" id="delete_Site_Button">Delete Site</button>
         <button type="button" onclick="back()">Return</button>
     </div>
