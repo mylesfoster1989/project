@@ -216,6 +216,8 @@
                         console.log(err);
                         errors = JSON.parse(err.responseText);
                         console.log(errors);
+                        $("#sitename_input_err").text(errors.sitehabitatname);
+                        $("#area_input_err").text(errors.area)
                     }
                 });
             }
@@ -324,7 +326,9 @@
    <hr>
             <table>
             <p><label>Site Habitat Name: </label><input id="sitehabitat_name" type="text" maxlength="30" size="30"></p>
+                <p id="sitename_input_err"></p>
             <p><label>Site Habitat Area: </label><input id="sitehabitat_area" type="number" maxlength="30" size="30">
+                <p id="area_input_err"></p>
             </p>
             </table>
       <hr>

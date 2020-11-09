@@ -110,6 +110,13 @@
                     },
                     error: function (err) {
                         console.log(err);
+                        errors = JSON.parse(err.responseText);
+                        console.log(err);
+                        $("#sitename_input_err").text(errors.sitename);
+                        $("#area_input_err").text(errors.area);
+                        $("#altitude_input_err").text(errors.altitude);
+                        $("#sitetype_input_err").text(errors.sitetype);
+                        $("#status_input_err").text(errors.status);
                     }
                 });
 
@@ -118,6 +125,7 @@
 
 
         });
+
 
 
 
@@ -187,8 +195,11 @@
             </select>
         </p>
         <p> <label>Site Name:</label><input id = "site_sitename" type = "text" maxlength="30" size="30"></p>
+        <p id="sitename_input_err"></p>
         <p> <label>Area:</label><input id = "site_area" type = "text" maxlength="30" size="30"></p>
+        <p id="area_input_err"></p>
         <p> <label>Altitude:</label><input id = "site_altitude" type = "number" maxlength="50" size="50"></p>
+        <p id="altitude_input_err"></p>
         <p> <label>Site Type:</label><select id = "site_sitetype"></p>
         <option>Strict Nature Reserve</option>
         <option>National Park</option>

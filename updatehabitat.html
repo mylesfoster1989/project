@@ -134,7 +134,7 @@
                     $("#habitats_input_err").text(errors.habitat);
                     $("#id_input_err").text(errors.id);
                     $("#description_input_err").text(errors.description);
-                    $("#type_input_err").text(errors.type);
+                    $("#type_input_err").text(errors.habitattype);
                 }
             });
         }
@@ -220,10 +220,12 @@
             <tr>
                 <td>Description:</td>
                 <td><input id="habitat_Description" type="text" maxlength="40" size="40"></td>
+                <td id = "description_input_err"></td>
             </tr>
             <tr>
                 <td>Type:</td>
                 <td><input id="habitat_Type" type="text" maxlength="10" size="10"></td>
+                <td id = "habitattype_input_err"></td>
             </tr>
         </table>
 
