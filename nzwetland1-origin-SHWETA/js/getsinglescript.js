@@ -157,3 +157,88 @@ function getsingleLanduse1(landuse){
     });
     return landuses;
 }
+/*function getsitehabitat1(siteHabitat){
+    //return assessment objects
+    siteHabitats = [];
+    $.ajax({
+        type: 'Get',
+        dataType: 'JSON',
+        async:false,
+        url: 'http://nzwetland.herokuapp.com/api/Sitehabitat/',
+        success: function (data) {
+            // location.reload();
+            i = 0;
+            while (i<data.length){
+                siteHabitat1 = data[i];
+                if (siteHabitat1.id == siteHabitat){
+                    siteHabitats.push(siteHabitat1);
+                }
+                i=i+1;
+            }
+
+        },
+        error: function (err) {
+            console.log(err);
+        }
+
+    });
+    return siteHabitats;
+}*/
+
+function getSitehabitat(sitHabitatID){
+    siteHabitat = "";
+    $.ajax({
+        type: 'Get',
+        dataType: 'JSON',
+        async:false,
+        url: 'http://nzwetland.herokuapp.com/api/Sitehabitat/'+sitHabitatID+'/',
+        success: function (data) {
+            // location.reload();
+            siteHabitat = data
+            },
+
+        error: function (err) {
+            console.log(err);
+        }
+
+    });
+    return siteHabitat;
+}
+function getSingleSitehabitatlanduse(sitehabitatlanduseID){
+    //return case object
+    $.ajax({
+        type: 'Get',
+        dataType: 'JSON',
+        async:false,
+        url: 'https://nzwetland.herokuapp.com/api/sitehabitatlanduse/'+sitehabitatlanduseID+'/',
+        success: function (data) {
+            // location.reload();
+            sitehabitatlanduse = data;
+
+        },
+        error: function (err) {
+            console.log(err);
+        }
+
+    });
+    return sitehabitatlanduse;
+}
+function getSingleSiteHabitat(siteHabitatID){
+    //return case object
+    $.ajax({
+        type: 'Get',
+        dataType: 'JSON',
+        async:false,
+        url: 'https://nzwetland.herokuapp.com/api/Sitehabitat/'+siteHabitatID+'/',
+        success: function (data) {
+            // location.reload();
+            siteHabitat1 = data;
+
+        },
+        error: function (err) {
+            console.log(err);
+        }
+
+    });
+    return siteHabitat1;
+}

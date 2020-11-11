@@ -31,7 +31,7 @@ function hasValidToken(){
         async: false,
         success: function (data) {
             console.log(data);
-            alert('valid login');
+            // alert('valid login');
             loginStatus = true;
         },
         error: function (err) {
@@ -145,3 +145,44 @@ function getAllSites() {
     });
     return sites;
 }
+
+$(document).ready(function () {
+    $("#login").hide();
+    $("#loggedin").hide();
+    $("#main").empty();
+    // console.log("valid login" + hasValidLogin());
+    if (hasValidLogin()) {
+        $("#login").hide();
+        $("#loggedin").show();
+        user = JSON.parse(localStorage.getItem('user'));
+        // check user group
+        groups = user.groups;
+        console.log(groups);
+        if (groups.includes(2)){
+            $("#main2").load("surveyofficermenu.html");
+        }
+        else if (groups.includes(1)){
+            $("#main").load("mainmenu.html");
+        }
+        else if (groups.includes(3)){
+            $("#main").load("dylan.html");
+        }
+
+
+    } else {
+        $("#login").show();
+        $("#loggedin").hide();
+
+    }
+
+    $("#loginBut").click(function () {
+        username = $("#username").val();
+        password = $("#password").val();
+        login(username, password);
+    });
+
+    $("#logoutBut").click(function (){
+        logout();
+
+    });
+});

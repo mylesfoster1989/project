@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RECORD OBSERVATION</title>
+    <style type="text/css">
+        body{
+            background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            border-radius:20%;
+            padding: 13%;
+            margin: 20%;
+            width: 300px;
+            height: fit-content;
+            border: black;
+            margin-right: auto;
+            margin-left: auto;
+            background: linear-gradient(to right, darkseagreen, darkolivegreen);
+            box-shadow: 0 0 20px 9px darkolivegreen;
+        }
+
+
+        button {
+            font-family: "Bookman Old Style";
+            width: 150px;
+            margin: 10px;
+            padding: 10px;
+            height: 80%;
+            background: linear-gradient(to right, whitesmoke, olive);
+            border-radius: 20px;
+            transition: .5s;
+            box-shadow: 0 0 20px 9px darkolivegreen;
+
+        }
+        div{
+
+            border-radius: 30px;
+            margin: 10px;
+            padding:10px;
+            width: fit-content;
+            height: 40%;
+        }
+        td{
+            font-size: large;
+            font-family: "Bookman Old Style";
+            width: fit-content;
+            margin: 20px;
+            padding: 10px;
+            height: 100%;
+            border-radius: 20px;
+
+        }
+
+        h1{
+            font-size: xx-large;
+            font-family: "Bookman Old Style";
+            text-align: center;
+        }
+        label{
+            font-size: large;
+            font-family: "Bookman Old Style";
+            text-align: center;
+
+        }
+
+
+
+    </style>
+
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(document).ready(function (){
+            $.ajax({
+                type: 'Get',
+                dataType: 'JSON',
+                url: 'https://nzwetland.herokuapp.com/api/Sitehabitat/',
+                success: function (data) {
+                    // location.reload();
+
+                    i = 0;
+                    while (i < data.length){
+                        sitehabitats = data[i];
+                        $("#siteHabitat_id_input").append("<option value='"+sitehabitats.id+"'>" +
+                            "" +sitehabitats.id+
+                            " | "+sitehabitats.sitehabitatname+"\</option>");
+                        i = i + 1;
+                    }
+                    $("#siteHabitat_id_input").change(function (){
+                        siteHabitat = getSingleSiteHabitat($("#siteHabitat_id_input").val());
+                        console.log('sitehabitat',siteHabitat)
+                        $("#siteHabitat_id").text(siteHabitat.id);
+                        $("#siteHabitat_name").text(siteHabitat.sitehabitatname);
+                        sitename1 = siteHabitat.site;
+                        console.log('sitename1',sitename1)
+                        sitename2 = getSingleSite(sitename1)
+                        console.log('sitename2',sitename2)
+                        $("#site_name").text(sitename2.sitename);
+                    })
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+            $.ajax({
+                type: 'Get',
+                dataType: 'JSON',
+                url: 'https://nzwetland.herokuapp.com/api/Survey/',
+                success: function (data) {
+                    // location.reload();
+
+                    i = 0;
+                    while (i < data.length){
+                        surveys = data[i];
+                        $("#survey_input").append("<option value='"+surveys.id+"'>" +
+                            "" +surveys.id+
+                            " | "+surveys.surveyname+"\</option>");
+                        i = i + 1;
+                    }
+                    $("#survey_input").change(function (){
+                        survey = getSingleSurvey($("#survey_input").val());
+                        $("#survey_id").text(survey.id);
+                        $("#survey_name").text(survey.surveyname);
+
+                    })
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+            $.ajax({
+                type: 'Get',
+                dataType: 'JSON',
+                url: 'https://nzwetland.herokuapp.com/api/Animal/',
+                success: function (data) {
+                    // location.reload();
+
+                    i = 0;
+                    while (i < data.length){
+                        animals = data[i];
+                        $("#animal_input").append("<option value='"+animals.id+"'>" +
+                            "" +animals.id+
+                            " | "+animals.commonname+"\</option>");
+                        i = i + 1;
+                    }
+                    $("#animal_input").change(function (){
+                        animal = getSingleanimal($("#animal_input").val());
+                        $("#animal_id").text(animal.id);
+                        $("#animal_common_name").text(animal.commonname);
+                        $("#animal_type").text(animal.type);
+
+                    })
+                },
+                error: function (err) {
+                    console.log(err);
+
+                }
+            });
+
+            $("#record_btn").click(function () {
+
+                sitehabitatID = $("#siteHabitat_id").text();
+                surveyID = $("#survey_id").text();
+                animalID= $("#animal_id").text();
+                numberObserved = $("#number_observed").val();
+                obDate= $("#Observation_date").val();
+                obStatus= $('input[name="status"]:checked').val();
+                console.log('animl',animalID),
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'JSON',
+                    url: 'https://nzwetland.herokuapp.com/api/Observation/',
+                    data: {
+                        status: obStatus,
+                        observationnumber: numberObserved,
+                        observationdate: obDate,
+                        sitehabitat: sitehabitatID,
+                        animal:animalID,
+                        survey:surveyID,
+                    },
+                    success: function (data) {
+                        alert('successfully');
+                        location.reload();
+                    },
+
+                    error: function (err) {
+                        console.log(err);
+                        errors = JSON.parse(err.responseText);
+                        $("#date_obs_err").text(errors.startdate)
+                        $("#number_err").text(errors.number)
+                        $("#status_err").text(errors.status)
+                    }
+                });
+
+            });
+
+        })
+
+
+    </script>
+    <script src="NZwetLand_IS5607-master/js/script.js"></script>
+    <link rel="stylesheet" href="NZwetLand_IS5607-master/css/styles.css">
+
+
+</head>
+<body id="page5">
+
+<nav id="nav">
+    <ul id="navigation">
+        <li><a href="homepage.html" class="first">Surveys Officer Menu</a></li>
+        <li><a href="#">Survey &raquo;</a>
+            <ul>
+                <li><a href="addSurvey.html">Add Survey</a></li>
+                <li><a href="deleteSurvey.html">Delete Survey</a></li>
+                <li><a href="updateSurvey.html">Update survey</a>
+                <li><a href="produceSurveysReport.html">Produce Survey Reports</a></li>
+
+            </ul>
+        </li>
+
+        <li><a href="#">Observation &raquo; </a>
+            <ul>
+                <li><a href="recordObservation.html">Record Observation</a></li>
+                <li><a href="remove_observation.html">Remove observation</a></li>
+                <li><a href="observationReport.html">Observations Report </a></li>
+            </ul></li>
+
+        <button type="logoutBut"><a href="homepage.html"> Logout</a></button>
+    </ul>
+</nav>
+<br>
+
+<div  class="container">
+
+        <h4 style="text-align: center">RECORD OBSERVATION</h4>
+        <form onsubmit="return false">
+            <div class="record_observation">
+
+                <table>
+                    <tr>
+                        <td>Site Habitat:</td>
+                        <td><select id="siteHabitat_id_input">
+                            <option value="">Select one</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Site Habitat ID:</td>
+                        <td id="siteHabitat_id"></td>
+                    </tr>
+                    <tr>
+                        <td>Site Habitat name:</td>
+                        <td id="siteHabitat_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Site Name:</td>
+                        <td id="site_name"></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="div_survey" >
+                <table>
+                    <tr>
+                        <td>Survey:</td>
+                        <td> <select id="survey_input">
+                            <option value="">Select one</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Survey ID:</td>
+                        <td id="survey_id"></td>
+                    </tr>
+                    <tr>
+                        <td>Survey Name:</td>
+                        <td id="survey_name"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="div_animal" >
+                <table>
+                    <tr>
+                        <td>Animal:</td>
+                        <td> <select id="animal_input">
+                            <option value="">Select one</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>animal ID:</td>
+                        <td id="animal_id"></td>
+                    </tr>
+                    <tr>
+                        <td>Common Name:</td>
+                        <td id="animal_common_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Type of Animal:</td>
+                        <td id="animal_type"></td>
+                    </tr>
+                </table>
+            </div>
+            <div >
+                <table>
+                    <tr>
+                        <td>Date of The Observation</td>
+                        <td><input id = "Observation_date" type="date" maxlength="3" size="10"></td>
+                        <td id="date_obs_err"></td>
+                    </tr>
+
+                    <td>Number Observed</td>
+                    <td><input id = "number_observed" type="text" maxlength="3" size="10"></td>
+                    <td id="number_err"></td>
+                    </tr>
+                    <tr>
+                        <td>Status:</td>
+                        <td>
+                            <input type="radio" name = "status" value="Confirmed">Confirmed<br>
+                            <input type="radio" name = "status" value="Unconfirmed">Unconfirmed
+                        </td>
+                        <td id="status_err"></td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </form>
+        <div class="div_but" style="text-align: center">
+
+            <button id="record_btn">RECORD OBSERVATION</button>
+            <button ><a href="surveyofficermenu.html">RETURN</a></button>
+        </div>
+
+
+</div>
+<div id="footer">
+    Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
+</div>
+</body>
+</html>

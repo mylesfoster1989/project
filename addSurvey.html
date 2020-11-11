@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD SURVEY</title>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function (){
+            $.ajax({
+                type: 'Get',
+                dataType: 'JSON',
+                url: 'https://nzwetland.herokuapp.com/api/Sponsor/',
+                success: function (data) {
+                    // location.reload();
+
+                    i = 0;
+                    while (i < data.length){
+                        sponsors = data[i];
+                        $("#sponsor_input").append("<option value='"+sponsors.id+"'>"+sponsors.sponsorname+"\</option>");
+                        i = i + 1;
+                    }
+
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+            $("#add_survey_but").click(function () {
+                surveyname1 = $("#survey_name").val();
+                budget1 = $("#survey_budget").val();
+                startdate1= $("#survey_startdate").val();
+                enddate1 = $("#survey_EndDate").val();
+                status1= $('input[name="status"]:checked').val();
+                sponsor1= $("#sponsor_input").val();
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'JSON',
+                    url: 'https://nzwetland.herokuapp.com/api/Survey/',
+                    data: {
+                        surveyname: surveyname1,
+                        budget: budget1,
+                        startdate: startdate1,
+                        enddate: enddate1,
+                        status:status1,
+                        sponsor:sponsor1,
+                    },
+                    success: function (data) {
+                        alert('successfully');
+                        location.reload();
+                    },
+                    error: function (err) {
+                        console.log(err);
+                        errors = JSON.parse(err.responseText);
+                        $("#survey_name_err").text(errors.surveyname)
+                        $("#survey_budget_err").text(errors.budget)
+                        $("#survey_startdate_err").text(errors.startdate)
+                        $("#survey_end_err").text(errors.enddate)
+                        $("#survey_stt_err").text(errors.status)
+                        $("#survey_sps_err").text(errors.status)
+                    }
+
+
+                });
+
+            });
+
+        })
+    </script>
+    <link rel="stylesheet" href="NZwetLand_IS5607-master/css/styles.css">
+</head>
+<body id="page5">
+
+<nav id="nav">
+    <ul id="navigation">
+        <li><a href="homepage.html" class="first">Surveys Officer Menu</a></li>
+        <li><a href="#">Survey &raquo;</a>
+            <ul>
+                <li><a href="addSurvey.html">Add Survey</a></li>
+                <li><a href="deleteSurvey.html">Delete Survey</a></li>
+                <li><a href="updateSurvey.html">Update survey</a>
+                <li><a href="produceSurveysReport.html">Produce Survey Reports</a></li>
+
+            </ul>
+        </li>
+
+        <li><a href="#">Observation &raquo; </a>
+            <ul>
+                <li><a href="recordObservation.html">Record Observation</a></li>
+                <li><a href="remove_observation.html">Remove observation</a></li>
+                <li><a href="observationReport.html">Observations Report </a></li>
+            </ul></li>
+
+        <button id="logoutBut"><a href="homepage.html"> Logout</a></button>
+    </ul>
+</nav>
+<br>
+
+<div class="container">
+    <div>
+        <h4 style="text-align: center">ADD SURVEY</h4>
+        <form onsubmit="return false">
+
+
+                <table>
+
+
+                    <tr>
+                        <td>Survey Name:</td>
+                        <td> <input id="survey_name"  size="10" type="text">
+                        </td>
+                        <td id="survey_name_err"></td>
+                    </tr>
+                    <tr>
+                        <td>Budget:</td>
+                        <td> <input id="survey_budget" type="text">
+                        <td id="survey_budget_err"></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Start Date:</td>
+                        <td><input id = "survey_startdate" type="date"  size="10"></td>
+                        <td id="survey_startdate_err"></td>
+                    </tr>
+                    <tr>
+                        <td>End Date:</td>
+                        <td><input id = "survey_EndDate" type="date" size="10"></td>
+                        <td id="survey_end_err"></td>
+                    </tr>
+                    <tr>
+                        <td>Status:</td>
+                        <td class="status">
+                            <input type="radio" name = "status" value="Ratified">Ratified
+                            <br>
+                            <input type="radio" name = "status" value="Unratified">Unratified
+                        <td id="survey_stt_err"></td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sponsor:</td>
+                        <td>
+                            <select id="sponsor_input">
+                                <option value="">select one</option>
+                            </select>
+                        </td>
+                        <td id="survey_sps_err"></td>
+                    </tr>
+
+                </table>
+
+
+        </form>
+
+
+            <button id="add_survey_but">ADD SURVEY</button>
+            <button ><a href="surveyofficermenu.html">RETURN</a></button>
+
+
+    </div>
+</div>
+<div id="footer">
+    Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
+</div>
+</body>
+</html>

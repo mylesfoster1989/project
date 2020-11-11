@@ -9,14 +9,67 @@
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous">
     </script>
+    <script> $(document).ready(function (){
+        $.ajax({
+            type: 'Get',
+            dataType: 'JSON',
+            url: 'http://nzwetland.herokuapp.com/api/landuse/',
+            success: function (data) {
+                // location.reload();
+
+                i = 0;
+                while (i < data.length){
+                    landuse = data[i];
+                    $("#landuse_input").append("<option value='"+landuse.id+"'>"+landuse.description+" "+landuse.landusetype+"\</option>");
+                    i = i + 1;
+                }
+
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+        $("#add_landuse_but").click(function () {
+
+            description = $("#landuse_description").val();
+            landusetype= $("#landuse_landusetype").val();
+
+            $.ajax({
+                type: 'POST',
+                dataType: 'JSON',
+                url: 'http://nzwetland.herokuapp.com/api/landuse/',
+                data: {
+
+                    description: description,
+                    landusetype: landusetype,
+
+                },
+                success: function (data) {
+                    alert('land use added successfully');
+                    if (confirm(' Add another land use?')) {
+                        location.reload();}
+                    else{
+                        console.log("");
+                        window.location.href = "mainmenu.html";
+                    }
+                },
 
 
-    <link rel="stylesheet" href="style/style.css">
+            });
+
+        });
+
+    })
+    </script>
+
+
+
+    <link rel="stylesheet" href="nzwetland1-origin-SHWETA/style/style.css">
 </head>
 <body id="page5">
 <nav id="nav">
     <ul id="navigation">
-        <li><a href="mainmenu.html" class="first">Main Menu</a></li>
+        <li><a href="homepage.html" class="first">Administrator Menu</a></li>
         <li><a href="#">Site &raquo;</a>
             <ul>
                 <li><a href="addsite.html">Add Site</a></li>
@@ -48,12 +101,12 @@
                 <li><a href="addlanduse.html">Add Landuse</a></li>
                 <li><a href="updatelanduse.html">Update Landuse</a></li>
                 <li><a href="deletelanduse.html">Delete Landuse</a></li>
-                <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
+                <li><a href="producelandusesreport.html">Produce Landuses Report </a></li>
             </ul></li>
-        <button id="logoutBut" >Log out</button>
+        <button type="logoutBut"><a href="homepage.html"> Logout</a></button>
     </ul>
 
-</nav><br><br>
+</nav><br>
 <div class="container"style="text-align: center">
     <div>
         <h1 style="text-align: center">Add Land use</h1>
@@ -77,7 +130,7 @@
         </form>
 
     <button id="add_landuse_but">Add</button>
-        <button type="button" ><a href="mainMenu.html"> Return</a></button>
+        <button type="button"><a href="homepage.html"> Return</a></button>
 
 
 </div>

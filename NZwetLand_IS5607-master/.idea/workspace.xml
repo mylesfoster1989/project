@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d6a6a24d-8f3b-4d28-8937-d985358b499d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/observationReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/observationReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produceSurveysReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/produceSurveysReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iDDV5hXjfqmWuVVMuC0jwbhfou" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6a6a24d-8f3b-4d28-8937-d985358b499d" name="Default Changelist" comment="" />
+      <created>1601433289882</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601433289882</updated>
+      <workItem from="1601433290912" duration="1673000" />
+      <workItem from="1601435007960" duration="1736000" />
+      <workItem from="1601436844845" duration="1498000" />
+      <workItem from="1603760833608" duration="618000" />
+      <workItem from="1603765691404" duration="38000" />
+      <workItem from="1603768280842" duration="965000" />
+      <workItem from="1603770098041" duration="1637000" />
+      <workItem from="1603771917649" duration="1237000" />
+      <workItem from="1603773161000" duration="476000" />
+      <workItem from="1603776628806" duration="1780000" />
+      <workItem from="1603778428454" duration="1427000" />
+      <workItem from="1603779993463" duration="229000" />
+      <workItem from="1603780235871" duration="1437000" />
+      <workItem from="1603781756012" duration="280000" />
+      <workItem from="1603782050208" duration="1812000" />
+      <workItem from="1603783879644" duration="981000" />
+      <workItem from="1603784984502" duration="1150000" />
+      <workItem from="1603786855844" duration="1719000" />
+      <workItem from="1603788665969" duration="484000" />
+      <workItem from="1603789257131" duration="1134000" />
+      <workItem from="1603790453379" duration="1263000" />
+      <workItem from="1603850285114" duration="1598000" />
+      <workItem from="1603852266025" duration="908000" />
+      <workItem from="1603854155064" duration="1058000" />
+      <workItem from="1603855888838" duration="67000" />
+      <workItem from="1603855971951" duration="1049000" />
+      <workItem from="1603857791326" duration="1240000" />
+      <workItem from="1603931665023" duration="962000" />
+      <workItem from="1603933474519" duration="1193000" />
+      <workItem from="1603935669829" duration="685000" />
+      <workItem from="1603941735962" duration="4815000" />
+      <workItem from="1603947037899" duration="346000" />
+      <workItem from="1604226941351" duration="208000" />
+      <workItem from="1604277765455" duration="6121000" />
+      <workItem from="1604363925841" duration="894000" />
+      <workItem from="1604368998720" duration="107000" />
+      <workItem from="1604369484294" duration="4802000" />
+      <workItem from="1604450384561" duration="6435000" />
+      <workItem from="1604458414288" duration="1869000" />
+      <workItem from="1604882379513" duration="8835000" />
+      <workItem from="1604968586290" duration="13095000" />
+      <workItem from="1605056434073" duration="975000" />
+      <workItem from="1605064427709" duration="2422000" />
+      <workItem from="1605067811717" duration="961000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="297" y="23" key="CommitChangelistDialog2" timestamp="1604971774984">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.838@0.23.1440.838" timestamp="1604971774984" />
+    <state x="681" y="352" key="Github.ShareDialog" timestamp="1601437653102">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="681" y="352" key="Github.ShareDialog/0.23.1440.838@0.23.1440.838" timestamp="1601437653102" />
+    <state x="609" y="160" key="Github.UntrackedFilesDialog" timestamp="1601437658850">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="609" y="160" key="Github.UntrackedFilesDialog/0.23.1440.838@0.23.1440.838" timestamp="1601437658850" />
+    <state x="637" y="185" width="670" height="676" key="search.everywhere.popup" timestamp="1604977430836">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="637" y="185" width="670" height="676" key="search.everywhere.popup/0.23.1440.838@0.23.1440.838" timestamp="1604977430836" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/script.js</url>
+          <line>168</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

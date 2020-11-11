@@ -3,61 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Habitat</title>
-    <style type="text/css">
 
-        div{
-
-            border-radius: 30px;
-            margin: 10px;
-            padding:10px;
-            width: 100%;
-            height: 100%;
-        }
-        td{
-            font-size: large;
-            font-family: "Bookman Old Style";
-            width: 120px;
-            margin: 20px;
-            padding: 10px;
-            height: 100%;
-            border-radius: 20px;
-
-        }
-
-
-        select{
-            border-radius: 30px;
-            height: 30px;
-            width: 60%;
-        }
-
-
-        input{
-            text-align: center;
-            font-size: large;
-            margin: 10px;
-            padding: 10px;
-            width: 220px;
-            height: 10px;
-            border-radius: 30px;
-            transition: .5s;
-            font-family: "Bookman Old Style";
-        }
-        h1{
-            font-size: xx-large;
-            font-family: "Bookman Old Style";
-            text-align: center;
-        }
-        label{
-            font-size: large;
-            font-family: "Bookman Old Style";
-            text-align: center;
-
-        }
-
-
-
-    </style>
 
     <script
             src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -85,7 +31,12 @@
                     },
                     success: function (data) {
                         alert('Habitat added successfully');
-                        location.reload();
+                        if (confirm('Do you want to add another habitat?')) {
+                            location.reload();}
+                        else{
+                            console.log("");
+                            window.location.href = "homepage.html";
+                        }
                     },
                     error: function (err) {
                         console.log(err);
@@ -98,14 +49,16 @@
             }
         })
     </script>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="shwetastyle.css">
+    <script src="js/script.js"></script>
 
 
 </head>
-<body>
+<body id="page5">
 <nav id="nav">
     <ul id="navigation">
-        <li><a href="mainmenu.html" class="first">Main Menu</a></li>
+        <li><a href="homepage.html" class="first">Administrator Menu</a></li>
         <li><a href="#">Site &raquo;</a>
             <ul>
                 <li><a href="addsite.html">Add Site</a></li>
@@ -139,7 +92,7 @@
                 <li><a href="deletelanduse.html">Delete Landuse</a></li>
                 <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
             </ul></li>
-        <button id="logoutBut" >Log out</button>
+        <button type="logoutBut"><a href="homepage.html"> Logout</a></button>
 
 
 
@@ -148,11 +101,12 @@
 </nav><br><br>
 
 <div class="container">
-    <h1>Add a Habitat</h1>
-    <hr>
+
 
     <form onsubmit="return false">
+
         <div class="center"style="background-color: whitesmoke, darkolivegreen">
+            <h1>Add a Habitat</h1>
 
             <table>
                 <tr></tr>
@@ -161,16 +115,23 @@
                 <p><label>Habitat Type: </label><input id="habitattype_input" type="text" maxlength="30" size="30"></p>
                 <p id = "habitattype_input_err"></p>
             </table>
+            <header class="center_button" style="text-align: center">
+                <button type="button" id="add_habitat_but">Add Habitat</button>
+                <button type="button"><a href="homepage.html"> Return</a></button>
 
+            </header>
         </div>
+
     </form>
-    <div class="center_button" style="text-align: center">
-        <button type="button" id="add_habitat_but">Add Habitat</button>
-        <button type="button" onclick="back()">Return</button>
-    </div>
+        <body id="page5">
+
+
+
+
 </div>
 <div id="footer">
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
 </div>
-</body>
+        </body>
+
 </html>

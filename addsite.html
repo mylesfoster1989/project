@@ -3,61 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Site</title>
-    <style type="text/css">
 
-        div{
-
-            border-radius: 30px;
-            margin: 10px;
-            padding:10px;
-            width: 100%;
-            height: 100%;
-        }
-        td{
-            font-size: large;
-            font-family: "Bookman Old Style";
-            width: 120px;
-            margin: 20px;
-            padding: 10px;
-            height: 100%;
-            border-radius: 20px;
-
-        }
-
-
-        select{
-            border-radius: 30px;
-            height: 30px;
-            width: 60%;
-        }
-
-
-        input{
-            text-align: center;
-            font-size: large;
-            margin: 10px;
-            padding: 10px;
-            width: 220px;
-            height: 10px;
-            border-radius: 30px;
-            transition: .5s;
-            font-family: "Bookman Old Style";
-        }
-        h1{
-            font-size: xx-large;
-            font-family: "Bookman Old Style";
-            text-align: center;
-        }
-        label{
-            font-size: large;
-            font-family: "Bookman Old Style";
-            text-align: center;
-
-        }
-
-
-
-    </style>
 
 
     <script
@@ -91,8 +37,14 @@
                     },
                     success: function (data) {
                         alert('Site added successfully');
-                        location.reload();
+                        if (confirm('Do you want to add another site?')) {
+                            location.reload();}
+                        else{
+                            console.log("");
+                            window.location.href = "homepage.html";
+                        }
                     },
+
                     error: function (err) {
                         console.log(err);
                         errors = JSON.parse(err.responseText);
@@ -107,12 +59,14 @@
             }
         })
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shwetastyle.css">
+    <script src="js/script.js"></script>
+
 </head>
-<body id="page34">
+<body id="page5">
 <nav id="nav">
     <ul id="navigation">
-        <li><a href="mainmenu.html" class="first">Main Menu</a></li>
+        <li><a href="homepage.html" class="first">Administrator Menu</a></li>
         <li><a href="#">Site &raquo;</a>
             <ul>
                 <li><a href="addsite.html">Add Site</a></li>
@@ -133,33 +87,33 @@
             <ul>
                 <li><a href="addhabitat.html">Add Habitat</a></li>
                 <li><a href="updatehabitat.html">Update Habitat</a></li>
-                <li><a href="nzwetland1-origin-SHWETA/deletehabitat.html">Delete Habitat </a></li>
+                <li><a href="deletehabitat.html">Delete Habitat </a></li>
                 <li><a href="producehabitat.html">Produce Habitat Report </a></li>
             </ul>
         </li>
 
         <li><a href="#">Landuse &raquo; </a>
             <ul>
-                <li><a href="nzwetland1-origin-SHWETA/assignlanduse.html">Assign Landuse</a></li>
-                <li><a href="nzwetland1-origin-SHWETA/removelanduse.html">Remove Landuse</a></li>
-                <li><a href="nzwetland1-origin-SHWETA/addlanduse.html">Add Landuse</a></li>
-                <li><a href="nzwetland1-origin-SHWETA/updatelanduse.html">Update Landuse</a></li>
-                <li><a href="nzwetland1-origin-SHWETA/deletelanduse.html">Delete Landuse</a></li>
+                <li><a href="assignlanduse.html">Assign Landuse</a></li>
+                <li><a href="removelanduse.html">Remove Landuse</a></li>
+                <li><a href="addlanduse.html">Add Landuse</a></li>
+                <li><a href="updatelanduse.html">Update Landuse</a></li>
+                <li><a href="deletelanduse.html">Delete Landuse</a></li>
                 <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
             </ul>
         </li>
 
-        <button id="logoutBut" >Log out</button>
+        <button type="logoutBut"><a href="homepage.html"> Logout</a></button>
     </ul>
 </nav>
 <br><br>
 
 <div class="container">
-    <h1>Add a Site</h1>
-    <hr>
+
+
     <form onsubmit="return false">
         <div class="center" style="background-color: whitesmoke, darkolivegreen">
-
+            <h1>Add a Site</h1>
             <table>
                 <p><label>Site Name: </label><input id="sitename_input" type="text" maxlength="30" size="30"></p>
                 <p id="sitename_input_err"></p>
@@ -184,12 +138,14 @@
                 <p id="status_input_err"></p>
 
             </table>
+            <header class="center_button" style="text-align: center">
+                <button type="button" id="add_site_but">Add Site</button>
+                <button type="button"><a href="homepage.html"> Return</a></button>
+            </header>
         </div>
+
     </form>
-    <div class="center_button" style="text-align: center">
-        <button type="button" id="add_site_but">Add Site</button>
-        <button type="button"><a href="mainMenuBigEye.html"> Return</a></button>
-    </div>
+
 
 </div>
 <div id="footer">

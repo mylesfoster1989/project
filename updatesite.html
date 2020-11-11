@@ -107,6 +107,13 @@
                     },
                     success: function (data) {
                         alert("Site updated successfully")
+                        if (confirm('Do you want to update another site?')) {
+                            location.reload();}
+                        else{
+                            console.log("");
+                            window.location.href = "homepage.html";
+                        }
+
                     },
                     error: function (err) {
                         console.log(err);
@@ -134,14 +141,16 @@
 
 
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shwetastyle.css">
+
 
 </head>
-<body>
+<body id="page5">
+
 
 <nav id="nav">
     <ul id="navigation">
-        <li><a href="mainmenu.html" class="first">Main Menu</a></li>
+        <li><a href="homepage.html" class="first">Administrator Menu</a></li>
         <li><a href="#">Site &raquo;</a>
             <ul>
                 <li><a href="addsite.html">Add Site</a></li>
@@ -176,17 +185,17 @@
                 <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
             </ul></li>
 
-        <button id="logoutBut" >Log out</button>
+        <button type="logoutBut"><a href="homepage.html"> Logout</a></button>
 
 
     </ul>
 </nav><br><br>
 <div class="container">
-    <h1>Update a site</h1>
-    <hr>
+
+
 <form onsubmit ="return false">
     <div class="center"style="background-color: whitesmoke, darkolivegreen">
-
+        <h1>Update a site</h1>
 
 
         <p><label> Site: </label>
@@ -215,14 +224,14 @@
 
         </select></p>
         <p id = "status_input_err"></p>
-
+        <header class="center_button" style="text-align: center">
+            <button type="button" id="update_site_but" >Update Site</button>
+            <button type="button"><a href="homepage.html"> Return</a></button>
+        </header>
 
     </div>
 </form>
-    <div class="center_button" style="text-align: center">
-    <button type="button" id="update_site_but" >Update Site</button>
-    <button type="button" ><a href="mainMenuBigEye.html"> Return</a></button>
-    </div>
+
 </div>
 <div id="footer">
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.

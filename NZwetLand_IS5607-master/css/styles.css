@@ -1,11 +1,9 @@
-
 /* form background image for all the forms  */
 body {
     background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
 
 }
 /* Main Navigation */
@@ -154,7 +152,6 @@ ul#navigation ul li a {
     width: 100px;
     margin: 4px;
     box-shadow: 0 0 20px 9px whitesmoke;
-
 }
 
 #page1  button {
@@ -229,7 +226,7 @@ ul#navigation ul li a {
     background: whitesmoke;
 }
 
-/*Produce Habitats report*/
+/*Produce Observation report*/
 #page2   button {
     font-family: "Bookman Old Style";
     width: 270px;
@@ -247,14 +244,15 @@ ul#navigation ul li a {
     margin: 4px;
     box-shadow: 0 0 20px 9px whitesmoke;
 }
-#page2 #habitat_report{
-    border-radius: 30px;
+#page2 #habitat_report {
+    border-radius: 20px;
     font-family: "Bookman Old Style";
-    background: linear-gradient(to right, darkseagreen,whitesmoke);
+    background: linear-gradient(to right, darkseagreen, whitesmoke);
     box-shadow: 0 0 20px 9px olive;
-    margin: auto;
-    width: fit-content;
-    display: flow;
+    margin: 40px auto;
+    width: 600px;
+    text-align: center;
+    height: fit-content;
 }
 
 #page2 #footer{
@@ -429,6 +427,7 @@ ul#navigation ul li a {
 
 /*Add Land use*/
 #page5  .container {
+
     border-radius:20px;
     padding: 10%;
     margin: 20%;
@@ -478,11 +477,11 @@ ul#navigation ul li a {
     font-size: large;
     margin: 15px;
     padding: 15px;
-    width:170px;
+  
     height: fit-content;
     border-radius: 30px;
     transition: .5s;
-    font-family: "Bookman Old Style";
+    
 }
 
 #page5  h1{
@@ -734,9 +733,6 @@ ul#navigation ul li a {
     margin: 4px;
     box-shadow: 0 0 20px 9px whitesmoke;
 }
-#page8 landuse_report{
-    display: inline-table;
-}
 #page8 #landuse_report{
     border-radius: 30px;
     font-family: "Bookman Old Style";
@@ -779,14 +775,13 @@ ul#navigation ul li a {
     font-family: "Bookman Old Style";
     text-align: center;
     width: 270px;
-    margin: 40px auto;
+    margin: 50px;
     padding: 5px;
     height: fit-content;
     background: linear-gradient(to right, whitesmoke, olive);
     border-radius: 20px;
     transition: .5s;
     box-shadow: 0 0 20px 9px darkolivegreen;
-    display: flow-root;
 }
 #page9 #logoutBut{
     width: 100px;
@@ -864,25 +859,18 @@ td{
     height: fit-content;
     text-align: center;
     display: inherit;
-
 }
 
-#page10  h6 {
+#page10  h1 {
     text-align: center;
-    font-size: xx-large;
-    color:   Black;
+    color:   darkolivegreen;
     box-shadow: 0 0 20px 9px whitesmoke;
-}
-h6 {
-    text-align: center;
-    font-family: "Bookman Old Style";
-    box-shadow: 0 0 20px 9px whitesmoke
 }
 #page10 #footer{
     font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;
     color: olivedrab;
-    width: 99%;
+    width: 100%;
     height: fit-content;
     font-size: large;
     margin: 1px;
@@ -891,23 +879,3 @@ h6 {
     text-align: center;
     background: whitesmoke;
 }
-
-
-/*login*/
-#page10 #loginPlace {
-    text-align: right;
-}
-
-#page10 #login input {
-    width: 400px;
-    height: 30px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 30px;
-
-}
-
-
-
-
-
