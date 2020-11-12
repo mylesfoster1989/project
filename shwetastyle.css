@@ -895,10 +895,14 @@ h6 {
 
 /*login*/
 #page10 #loginPlace {
-    text-align: right;
+    text-align: center;
+    width: 500px;
+    height: fit-content;
+    margin: 100px;
 }
 
 #page10 #login input {
+    text-align: center;
     width: 400px;
     height: 30px;
     margin: 10px;
