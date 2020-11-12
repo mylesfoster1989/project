@@ -874,7 +874,8 @@ td{
     height: fit-content;
     text-align: center;
     display: inherit;
-
+    box-shadow: 0 0 20px 9px darkolivegreen;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
 
 }
 
