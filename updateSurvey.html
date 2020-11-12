@@ -169,8 +169,12 @@
                     },
                     success: function (data) {
                         alert('successfully');
-                        console.log(data);
-
+                        if (confirm(' update another survey?')) {
+                            location.reload();}
+                        else{
+                            console.log("");
+                            window.location.href = "homepage.html";
+                        }
                     },
                     error: function (err) {
                         console.log(err);

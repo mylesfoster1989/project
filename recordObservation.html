@@ -189,7 +189,12 @@
                     },
                     success: function (data) {
                         alert('successfully');
-                        location.reload();
+                        if (confirm(' record another observation?')) {
+                            location.reload();}
+                        else{
+                            console.log("");
+                            window.location.href = "homepage.html";
+                        }
                     },
 
                     error: function (err) {

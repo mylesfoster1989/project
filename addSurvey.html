@@ -50,7 +50,12 @@
                     },
                     success: function (data) {
                         alert('successfully');
-                        location.reload();
+                        if (confirm(' Add another Survey?')) {
+                            location.reload();}
+                        else{
+                            console.log("");
+                            window.location.href = "homepage.html";
+                        }
                     },
                     error: function (err) {
                         console.log(err);

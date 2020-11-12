@@ -161,7 +161,12 @@
                     url: 'https://nzwetland.herokuapp.com/api/Observation/'+deleteObs,
                     success: function (data) {
                         alert('Observation  removed successfully');
-                        location.reload();
+                        if (confirm(' delete another observation?')) {
+                            location.reload();}
+                        else{
+                            console.log("");
+                            window.location.href = "homepage.html";
+                        }
                     },
                     error: function (err) {
                         console.log(err);

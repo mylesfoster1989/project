@@ -51,7 +51,12 @@
                     url: 'https://nzwetland.herokuapp.com/api/Survey/'+deleteSurvey,
                     success: function (data) {
                         alert('Assignment  removed successfully');
-                        location.reload();
+                        if (confirm(' delete another survey?')) {
+                            location.reload();}
+                        else{
+                            console.log("");
+                            window.location.href = "homepage.html";
+                        }
                     },
                     error: function (err) {
                         console.log(err);
