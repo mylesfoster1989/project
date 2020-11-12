@@ -775,6 +775,16 @@ ul#navigation ul li a {
 }
 
 /*Produce Site Habitat Report*/
+#page9 #site_report {
+    border-radius: 20px;
+    font-family: "Bookman Old Style";
+    background: linear-gradient(to right, darkseagreen, whitesmoke);
+    box-shadow: 0 0 20px 9px olive;
+    margin: 40px auto;
+    width: 600px;
+    text-align: center;
+    height: fit-content;
+}
 #page9  button {
     font-family: "Bookman Old Style";
     text-align: center;
@@ -908,6 +918,9 @@ h6 {
     margin: 10px;
     padding: 10px;
     border-radius: 30px;
+
+}
+#page10 #loggedin {
 
 }
 

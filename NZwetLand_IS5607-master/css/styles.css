@@ -1,4 +1,97 @@
+/*locsdelete*/
+/*Delete Habitat*/
+#deletesurvey .container {
+    border-radius: 20px;
+    padding: 5%;
+    margin: 5%;
+    width: 50%;
+    height: fit-content;
+    border: black;
+    margin-right: auto;
+    margin-left: auto;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+}
+#deletesurvey #logoutBut{
+    width: 100px;
+    margin: 4px;
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+
+#deletesurvey button {
+    font-family: "Bookman Old Style";
+    width: 220px;
+    margin: 5px;
+    padding: 10px;
+    height: 100%;
+    background: linear-gradient(to right, whitesmoke, olive);
+    border-radius: 20px;
+    transition: .5s;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+#deletesurvey div{
+    border-radius: 30px;
+    margin: 10px;
+    padding:10px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+#deletesurvey select{
+    border-radius: 30px;
+    height: 30px;
+
+}
+#deletesurvey td{
+    font-size: large;
+    font-family: "Bookman Old Style";
+    width: 120px;
+    margin: 20px;
+    padding: 10px;
+    height: 100%;
+    border-radius: 20px;
+}
+#deletesurvey input{
+    text-align: center;
+    font-size: large;
+    margin: 30px;
+    padding: 20px;
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    transition: .5s;
+    font-family: "Bookman Old Style";
+}
+#deletesurvey h1{
+    font-size: xx-large;
+    font-family: "Bookman Old Style";
+    text-align: center;
+}
+
+#deletesurvey label{
+    font-size: large;
+    font-family: "Bookman Old Style";
+    text-align: center;
+}
+
+#deletesurvey #footer{
+    font-family: "Bookman Old Style";
+    box-shadow: 0 0 20px 9px whitesmoke;
+    color: olivedrab;
+    width: 100%;
+    height: fit-content;
+    font-size: large;
+    margin: 1px;
+    padding:10px;
+    border-radius: 20px;
+    text-align: center;
+    background: whitesmoke;
+}
+
+
 /* form background image for all the forms  */
+
 body {
     background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
     background-repeat: no-repeat;
