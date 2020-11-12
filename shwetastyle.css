@@ -839,25 +839,21 @@ td{
 
 /*main menu*/
 #page10 div {
-    width: 300px;
+    width: 320px;
     height: fit-content;
     background: linear-gradient(to right, whitesmoke, darkolivegreen);
     box-shadow: 0 0 20px 9px olivedrab;
     font-family: "Bookman Old Style";
     text-align: center;
-    font-size: small;
+    font-size: medium;
     margin: 40px auto;
     padding: inherit;
     border-radius: 20px;
     display: inline-table;
     flex-flow: inherit;
+
 }
 
-#page10 #logoutBut{
-    width: 100px;
-    margin: 4px;
-    box-shadow: 0 0 20px 9px whitesmoke;
-}
 
 #page10   input {
     font-family: "Bookman Old Style";
@@ -865,17 +861,12 @@ td{
     border-radius: 10px;
     width: 20%;
     height: 60%;
-    text-decoration-color: black;
-
-}
-
-#page10 #exitbut{
-    width: 20%;
-    height: fit-content;
+    color:   darkolivegreen;
+    box-shadow: 0 0 20px 9px darkolivegreen;
     text-align: center;
-    display: inherit;
-
 }
+
+
 
 #page10  h6 {
     text-align: center;
@@ -883,11 +874,11 @@ td{
     color:   Black;
     box-shadow: 0 0 20px 9px whitesmoke;
 }
-h6 {
-    text-align: center;
-    font-family: "Bookman Old Style";
-    box-shadow: 0 0 20px 9px whitesmoke
-}
+/*h6 {*/
+/*    text-align: center;*/
+/*    font-family: "Bookman Old Style";*/
+/*    box-shadow: 0 0 20px 9px whitesmoke*/
+/*}*/
 #page10 #footer{
     font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;
@@ -901,7 +892,35 @@ h6 {
     text-align: center;
     background: whitesmoke;
 }
+#page10 div{
+    width: 320px;
+    height: fit-content;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px olivedrab;
+    font-family: "Bookman Old Style";
+    text-align: center;
+    font-size: medium;
+    margin: 40px auto;
+    padding: inherit;
+    border-radius: 20px;
+    display: inline-table;
+    flex-flow: inherit;
 
+}
+#page10  button {
+    font-family: "Bookman Old Style";
+    text-align: center;
+    width: 270px;
+    margin: 40px auto;
+    padding: 5px;
+    height: fit-content;
+    background: linear-gradient(to right, whitesmoke, olive);
+    border-radius: 20px;
+    transition: .5s;
+    box-shadow: 0 0 20px 9px whitesmoke, olive;
+    display: flow-root;
+    font-size: large;
+}
 
 /*login*/
 #page10 #loginPlace {
@@ -920,10 +939,29 @@ h6 {
     border-radius: 30px;
 
 }
-#page10 #loggedin {
 
+/*logout*/
+#page10 #loggedin{
+    font-size: xx-large;
+    height: fit-content;
+    float: right;
 }
 
+
+
+#page10 #logoutbut{
+    font-size: xx-large;
+    height: fit-content;
+    float: right;
+
+}
+#page10 #exitbut{
+    width: 20%;
+    height: fit-content;
+    text-align: center;
+    display: inherit;
+
+}
 
 
 
