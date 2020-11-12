@@ -82,7 +82,12 @@
                     url: 'https://nzwetland.herokuapp.com/api/sitehabitatlanduse/'+deletelanduse,
                     success: function (data) {
                         alert('  removed successfully');
-                        location.reload();
+                        if (confirm('Do you want to remove another landuse?')) {
+                            location.reload();
+                        } else {
+                            console.log("");
+                            window.location.href = "homepage.html";
+                        }
                     },
                     error: function (err) {
                         console.log(err);
@@ -118,7 +123,7 @@
             <ul>
                 <li><a href="addsitehabitat.html">Add Site Habitat</a></li>
                 <li><a href="removesitehabitat.html">Remove Site Habitat</a></li>
-                <li><a href="producesitehabitat.html">Produce Site Habitat Report</a></li>
+                <li><a href="producesitehabitatsreport.html">Produce Site Habitat Report</a></li>
             </ul>
         </li>
         <li><a href="#">Habitat &raquo; </a>
@@ -126,7 +131,7 @@
                 <li><a href="addhabitat.html">Add Habitat</a></li>
                 <li><a href="updatehabitat.html">Update Habitat</a></li>
                 <li><a href="deletehabitat.html">Delete Habitat </a></li>
-                <li><a href="producehabitat.html">Produce Habitat Report </a></li>
+                <li><a href="producehabitatsreport.html">Produce Habitat Report </a></li>
             </ul></li>
 
         <li><a href="#">Landuse &raquo; </a>
@@ -136,8 +141,10 @@
                 <li><a href="addlanduse.html">Add Landuse</a></li>
                 <li><a href="updatelanduse.html">Update Landuse</a></li>
                 <li><a href="deletelanduse.html">Delete Landuse</a></li>
-                <li><a href="producelandusereport.html">Produce Landuses Report </a></li>
+                <li><a href="producelandusesreport.html">Produce Landuses Report </a></li>
             </ul></li>
+
+
 
 
 
