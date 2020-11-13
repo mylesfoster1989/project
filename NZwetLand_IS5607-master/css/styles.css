@@ -827,7 +827,7 @@ td{
 
 /*main menu*/
 #page10 div {
-    width: 300px;
+    width: 320px;
     height: fit-content;
     background: linear-gradient(to right, whitesmoke, darkolivegreen);
     box-shadow: 0 0 20px 9px olivedrab;
@@ -840,6 +840,7 @@ td{
     display: inline-table;
     flex-flow: inherit;
 }
+
 
 #page10 #loggedin{
     font-size: xx-large;
@@ -896,4 +897,9 @@ td{
     border-radius: 20px;
     text-align: center;
     background: whitesmoke;
+}
+#page10 #exitbut{
+    font-size: large;
+    height: fit-content;
+    text-align: center;
 }

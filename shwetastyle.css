@@ -950,8 +950,8 @@ td{
 
 
 
-#page10 #logoutbut{
-    font-size: xx-large;
+#page10 #logoutBut{
+    font-size: large;
     height: fit-content;
     float: right;
 }
@@ -964,6 +964,9 @@ td{
     background: linear-gradient(to right, whitesmoke, darkolivegreen);
 
 }
+
+
+
 
 
 
