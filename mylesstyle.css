@@ -1,0 +1,533 @@
+/* form background image for all the forms  */
+body {
+    background-image: url("https://images.pexels.com/photos/5645557/pexels-photo-5645557.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+}
+/* Main Navigation */
+#nav {
+    font-family: "Bookman Old Style";
+    text-align: center;
+    font-size: x-large;
+    width: 100%;
+    height: fit-content;
+    background-color: whitesmoke;
+    margin: 0;
+    border-radius: 30px;
+    position: absolute;
+    box-shadow: 0 0 20px 9px whitesmoke;
+
+}
+
+ul#navigation {
+    margin:0px auto;
+    border-color: olive;
+    border-radius: 20px;
+    width: fit-content;
+    text-align: center;
+
+}
+ul#navigation li {
+    display:inline;
+    font-size:25px;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+    float: left;
+    position:relative;
+
+}
+
+ul#navigation li a {
+    padding:10px 25px;
+    color:olive;
+    text-shadow:1px 1px 0px #fff;
+    text-decoration:none;
+    display:inline-block;
+    border-right:1px solid #fff;
+    border-left:1px solid #C2C2C2;
+    border-top:1px solid #fff;
+    background: #f5f5f5;
+
+    -webkit-transition:color 0.2s linear, background 0.2s linear;
+    -moz-transition:color 0.2s linear, background 0.2s linear;
+    -o-transition:color 0.2s linear, background 0.2s linear;
+    transition:color 0.2s linear, background 0.2s linear;
+}
+
+ul#navigation li a:hover {
+    background:olivedrab;
+    color:darkolivegreen;
+}
+
+ul#navigation li a.first {
+    border-left: 0 none;
+}
+
+ul#navigation li a.last {
+    border-right: 0 none;
+}
+
+ul#navigation li:hover > a {
+    background:darkseagreen;
+}
+/* Drop-Down Navigation */
+ul#navigation li:hover > ul
+{
+
+    visibility:visible;
+    opacity:1;
+}
+
+ul#navigation ul, ul#navigation ul li ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    /*the next 2 styles are very important,
+    being the ones which make the drop-down to stay hidden */
+    visibility:hidden;
+    opacity:0;
+    position: absolute;
+    z-index: 99999;
+    width:180px;
+    height: fit-content;
+    text-align: center;
+    background:whitesmoke;
+    font-family: "Bookman Old Style";
+    box-shadow: 0 0 20px 9px darkolivegreen;
+    border-radius: 20px;
+    -webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -o-transition:opacity 0.2s linear, visibility 0.2s linear;
+    transition:opacity 0.2s linear, visibility 0.2s linear;
+}
+
+ul#navigation ul {
+    top: 50px;
+    left: 1px;
+    float: right;
+}
+
+ul#navigation ul li ul {
+    top: 0;
+    left: 181px; /* strong related to width:180px; from above */
+}
+
+ul#navigation ul li {
+    clear:both;
+    width:100%;
+    border:0 none;
+    border-bottom:3px solid #c9c9c9;
+}
+
+ul#navigation ul li a {
+    background:none;
+    padding:7px 15px;
+    color:#616161;
+    text-shadow:1px 1px 0px #fff;
+    text-decoration:none;
+    display:inline-block;
+    border:0 none;
+    float:left;
+    clear:both;
+    width:fit-content;
+    height: fit-content;
+}
+
+
+/*addsitehabitat*/
+#page16 .container {
+    border-radius:20px;
+    padding: 10%;
+    margin: 40px auto;
+    width: 500px;
+    height: fit-content;
+    border: black;
+    margin-right: auto;
+    margin-left: auto;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px olive;
+}
+#page16 div {
+    border-radius:20px;
+    padding: 10%;
+    margin: 40px auto;
+    width: 450px;
+    height: 60%;
+    margin-right: auto;
+    margin-left: auto;
+
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px olivedrab;
+}
+#page16 #logoutBut{
+    width: 100px;
+    margin: 4px;
+}
+
+#page16 input{
+    text-align: center;
+    font-size: large;
+    margin: 10px;
+    padding: 20px;
+    width: 220px;
+    height: fit-content;
+    border-radius: 20px;
+    transition: .5s;
+    font-family: "Bookman Old Style";
+}
+
+#page16 button {
+    font-family: "Bookman Old Style";
+    width: 220px;
+    margin: 1px;
+    padding: 10px;
+    height: 60%;
+    background: linear-gradient(to right, whitesmoke, olive);
+    border-radius: 30px;
+    transition: .5s;
+    background-position: center;
+    box-shadow: 0 0 20px 9px whitesmoke;
+    color: black;
+
+}
+#page16 select{
+    border-radius: 30px;
+    height: 30px;
+    width: 100%;
+}
+
+#page16  h1{
+    font-size: xx-large;
+    font-family: "Bookman Old Style";
+    text-align: center;
+}
+
+
+#page16 #footer{
+    font-family: "Bookman Old Style";
+    box-shadow: 0 0 20px 9px whitesmoke;
+    color: olivedrab;
+    width: 100%;
+    height: fit-content;
+    font-size: large;
+    margin: 1px;
+    padding:10px;
+    border-radius: 20px;
+    text-align: center;
+    background: whitesmoke;
+}
+
+
+
+
+/*Produce Site Report*/
+#page18 #site_report {
+    border-radius: 20px;
+    font-family: "Bookman Old Style";
+    background: linear-gradient(to right, darkseagreen, whitesmoke);
+    box-shadow: 0 0 20px 9px olive;
+    margin: 40px auto;
+    width: 600px;
+    text-align: center;
+    height: fit-content;
+}
+#page18  button {
+    font-family: "Bookman Old Style";
+    text-align: center;
+    width: 270px;
+    margin: 40px auto;
+    padding: 5px;
+    height: fit-content;
+    background: linear-gradient(to right, whitesmoke, olive);
+    border-radius: 20px;
+    transition: .5s;
+    box-shadow: 0 0 20px 9px darkolivegreen;
+    display: flow-root;
+}
+#page18 #logoutBut{
+    width: 100px;
+    margin: 4px;
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+#page18 div{
+    border-radius: 20px;
+
+    font-family: "Bookman Old Style";
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px olive;
+}
+#page18
+td{
+    font-size: large;
+    font-family: "Bookman Old Style";
+    width: fit-content;
+    margin: 20px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 20px;
+
+}
+
+#page18 #footer{
+    font-family: "Bookman Old Style";
+    box-shadow: 0 0 20px 9px whitesmoke;
+    color: olivedrab;
+    width: 100%;
+    height: fit-content;
+    font-size: large;
+    margin: 1px;
+    padding:10px;
+    border-radius: 20px;
+    text-align: center;
+    background: whitesmoke;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*update habitat*/
+/*update site*/
+/*add site*/
+/*delete site*/
+/*add habitat*/
+/*remove site habitat*/
+/*updatelanduse*/
+/*deletelanduse*/
+/*deletehabitat*/
+#page15  .container {
+    border-radius:20px;
+    padding: 5%;
+    margin: 4%;
+    width: 25%;
+    height: fit-content;
+    border: black;
+    margin-right: auto;
+    margin-left: auto;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+#page15 #logoutBut{
+    width: 100px;
+    margin: 4px;
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+#page15    button {
+    font-family: "Bookman Old Style";
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    height: 80%;
+    background: linear-gradient(to right, whitesmoke, olive);
+    border-radius: 20px;
+    transition: .5s;
+    box-shadow: 0 0 20px 9px darkolivegreen;
+}
+#page15 label {
+    font-size: large;
+    font-family: "Bookman Old Style";
+    text-align: center;
+}
+
+#page15   td{
+    font-size: large;
+    font-family: "Bookman Old Style";
+    width: fit-content;
+    margin: 20px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 20px;
+
+}
+
+#page15  input{
+    text-align: center;
+    font-size: large;
+    margin: 15px;
+    padding: 15px;
+    width:170px;
+    height: fit-content;
+    border-radius: 30px;
+    transition: .5s;
+    font-family: "Bookman Old Style";
+}
+
+#page15  h1{
+    font-size: xx-large;
+    font-family: "Bookman Old Style";
+    text-align: center;
+}
+
+#page15 div{
+
+    font-family: "Bookman Old Style";
+    box-shadow: 0 0 20px 9px whitesmoke;
+    color: black;
+    width: 100%;
+    font-size: large;
+    margin: 10px;
+    padding:10px;
+    border-radius: 20px;
+}
+
+#page15 #footer{
+    font-family: "Bookman Old Style";
+    box-shadow: 0 0 20px 9px whitesmoke;
+    color: olivedrab;
+    width: 100%;
+    height: fit-content;
+    font-size: large;
+    margin: 1px;
+    padding:10px;
+    border-radius: 20px;
+    text-align: center;
+    background: whitesmoke;
+}
+#page15  select {
+    border-radius: 30px;
+    height: 30px;
+    width: 60%;
+    color: black;
+}
+
+/*mainmenu and homepage*/
+/*main menu*/
+#page10 div {
+    width: 320px;
+    height: fit-content;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px olivedrab;
+    font-family: "Bookman Old Style";
+    text-align: center;
+    font-size: small;
+    margin: 40px auto;
+    padding: inherit;
+    border-radius: 20px;
+    display: inline-table;
+    flex-flow: inherit;
+
+}
+
+
+#page10   input {
+    font-family: "Bookman Old Style";
+    text-align: center;
+    width: 400px;
+    margin: 40px auto;
+    padding: 5px;
+    height: fit-content;
+    box-shadow: 0 0 20px 9px olivedrab;
+    border-radius: 20px;
+    transition: .5s;
+    display: flow-root;
+    font-size: large;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+
+
+
+}
+
+
+
+#page10  h6 {
+    text-align: center;
+    font-size: xx-large;
+    color:   Black;
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+/*h6 {*/
+/*    text-align: center;*/
+/*    font-family: "Bookman Old Style";*/
+/*    box-shadow: 0 0 20px 9px whitesmoke*/
+/*}*/
+#page10 #footer{
+    font-family: "Bookman Old Style";
+    box-shadow: 0 0 20px 9px whitesmoke;
+    color: olivedrab;
+    width: 99%;
+    height: fit-content;
+    font-size: large;
+    margin: 1px;
+    padding:10px;
+    border-radius: 20px;
+    text-align: center;
+    background: whitesmoke;
+}
+
+#page10  button {
+    font-family: "Bookman Old Style";
+    text-align: center;
+    width: 270px;
+    margin: 40px auto;
+    padding: 5px;
+    height: fit-content;
+    box-shadow: 0 0 20px 9px olivedrab;
+    border-radius: 20px;
+    transition: .5s;
+    display: flow-root;
+    font-size: large;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px darkolivegreen;
+
+}
+
+/*login*/
+#page10 #loginPlace {
+    text-align: center;
+    width: 500px;
+    height: fit-content;
+    margin: 100px;
+
+}
+
+#page10 #login input {
+    text-align: center;
+    width: 400px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 30px;
+
+
+}
+
+/*logout*/
+#page10 #loggedin{
+    font-size: large;
+    height: fit-content;
+    float: right;
+
+}
+
+
+
+#page10 #logoutBut{
+    font-size: medium;
+    height: fit-content;
+    float: right;
+    box-shadow: 0 0 20px 9px olivedrab;
+
+}
+
+#page10 #exitbut{
+    width: 20%;
+    height: fit-content;
+    text-align: center;
+    display: inherit;
+    box-shadow: 0 0 20px 9px darkolivegreen;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+
+}
+
+

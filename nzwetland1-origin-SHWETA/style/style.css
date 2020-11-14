@@ -273,10 +273,22 @@ ul#navigation ul li a {
 
 /* Assign Land use*/
 
+#page3 .container {
+    border-radius: 20px;
+    padding: 5%;
+    margin: 40px auto;
+    width: 35%;
+    height: 80%;
+    border: black;
+    margin-right: auto;
+    margin-left: auto;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+}
+
 #page3 div {
     border-radius:20px;
     padding: 10%;
-    margin: 7%;
+    margin: 40px auto;
     width: 450px;
     height: 60%;
     margin-right: auto;
@@ -294,13 +306,12 @@ ul#navigation ul li a {
     width: 220px;
     margin: 1px;
     padding: 10px;
-    height: 60%;
+    height: fit-content;
     background: linear-gradient(to right, whitesmoke, olive);
-    border-radius: 30px;
+    border-radius: 20px;
     transition: .5s;
-    background-position: center;
     box-shadow: 0 0 20px 9px whitesmoke;
-    color: black;
+
 
 }
 #page3 select{
@@ -431,7 +442,7 @@ ul#navigation ul li a {
 #page5  .container {
     border-radius:20px;
     padding: 10%;
-    margin: 20%;
+    margin: 40px auto;
     width: 25%;
     height: fit-content;
     border: black;
@@ -539,7 +550,7 @@ ul#navigation ul li a {
     margin: 7px;
     padding: 10px;
     height: fit-content;
-    background: linear-gradient(to right, whitesmoke, darkseagreen);
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
     border-radius: 20px;
     transition: .5s;
     box-shadow: 0 0 20px 9px whitesmoke;
@@ -572,6 +583,7 @@ ul#navigation ul li a {
     border-radius: 30px;
     transition: .5s;
     font-family: "Bookman Old Style";
+
 }
 #page6 h1{
     font-size: xx-large;
@@ -621,8 +633,8 @@ ul#navigation ul li a {
 #page7 .container {
     border-radius:20px;
     padding: 10%;
-    margin: 10%;
-    width: 600px;
+    margin: 50px auto;
+    width: 30%;
     height: fit-content;
     border: black;
     margin-right: auto;
@@ -630,18 +642,14 @@ ul#navigation ul li a {
     background: linear-gradient(to right, whitesmoke, darkolivegreen);
 }
 
-#page7 #logoutBut{
-    width: 100px;
-    margin: 4px;
-    box-shadow: 0 0 20px 9px whitesmoke;
-}
+
 
 #page7  button {
     font-family: "Bookman Old Style";
-    width: 220px;
+    width: 170px;
     margin: 5px;
-    padding: 10px;
-    height: 100%;
+    padding: 2%;
+    height:fit-content;
     background: linear-gradient(to right, whitesmoke, olive);
     border-radius: 20px;
     transition: .5s;
@@ -695,6 +703,7 @@ ul#navigation ul li a {
     box-shadow: 0 0 20px 9px whitesmoke;
     color: black;
     width: 100%;
+    height: fit-content;
     font-size: large;
     margin: 10px;
     padding:10px;

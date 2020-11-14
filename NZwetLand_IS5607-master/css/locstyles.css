@@ -139,12 +139,12 @@ ul#navigation ul li a {
     height: fit-content;
 }
 
-/*Delete Habitat*/
+/*Delete Survey*/
 #page1 .container {
     border-radius: 20px;
     padding: 5%;
     margin: 5%;
-    width: 50%;
+    width: 30%;
     height: fit-content;
     border: black;
     margin-right: auto;
@@ -181,12 +181,12 @@ ul#navigation ul li a {
 #page1 select{
     border-radius: 30px;
     height: 30px;
-    width: 50%;
+    width: 220px;
 }
 #page1 td{
     font-size: large;
     font-family: "Bookman Old Style";
-    width: 120px;
+    width: 220px;
     margin: 20px;
     padding: 10px;
     height: 100%;
@@ -197,8 +197,8 @@ ul#navigation ul li a {
     font-size: large;
     margin: 30px;
     padding: 20px;
-    width: 120px;
-    height: 50px;
+    width: 220px;
+    height: fit-content;
     border-radius: 30px;
     transition: .5s;
     font-family: "Bookman Old Style";
@@ -213,6 +213,7 @@ ul#navigation ul li a {
     font-size: large;
     font-family: "Bookman Old Style";
     text-align: center;
+
 }
 
 #page1 #footer{
@@ -433,14 +434,20 @@ ul#navigation ul li a {
 
     border-radius:20px;
     padding: 10%;
-    margin: 20%;
-    width: 25%;
+    margin: 40px auto;
+    width: 45%;
     height: fit-content;
     border: black;
     margin-right: auto;
     margin-left: auto;
     background: linear-gradient(to right, whitesmoke, darkolivegreen);
     box-shadow: 0 0 20px 9px whitesmoke;
+}
+
+#page5 select{
+    border-radius: 30px;
+    height: 30px;
+    width: 100%;
 }
 #page5 #logoutBut{
     width: 100px;
@@ -449,14 +456,16 @@ ul#navigation ul li a {
 }
 #page5    button {
     font-family: "Bookman Old Style";
-    width: 150px;
+    width: 250px;
     margin: 10px;
-    padding: 10px;
-    height: 80%;
+    padding: 15px;
+    height: fit-content;
     background: linear-gradient(to right, whitesmoke, olive);
     border-radius: 20px;
     transition: .5s;
     box-shadow: 0 0 20px 9px darkolivegreen;
+
+
 }
 #page5 label {
     font-size: large;
@@ -499,6 +508,7 @@ ul#navigation ul li a {
     box-shadow: 0 0 20px 9px whitesmoke;
     color: black;
     width: 100%;
+    height: fit-content;
     font-size: large;
     margin: 10px;
     padding:10px;
@@ -861,14 +871,19 @@ td{
 
 #page10   input {
     font-family: "Bookman Old Style";
+    text-align: center;
+    width: 400px;
+    margin: 40px auto;
+    padding: 5px;
+    height: fit-content;
+    box-shadow: 0 0 20px 9px olivedrab;
+    border-radius: 20px;
+    transition: .5s;
+    display: flow-root;
     font-size: large;
-    border-radius: 10px;
-    width: 20%;
-    height: 60%;
-    color:   darkolivegreen;
-    box-shadow: 0 0 20px 9px darkolivegreen;
-
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
 }
+
 
 #page10 #exitbut{
     width: 20%;
@@ -884,6 +899,22 @@ td{
     text-align: center;
     color:   darkolivegreen;
     box-shadow: 0 0 20px 9px whitesmoke;
+}
+#page10  button {
+    font-family: "Bookman Old Style";
+    text-align: center;
+    width: 270px;
+    margin: 40px auto;
+    padding: 5px;
+    height: fit-content;
+    box-shadow: 0 0 20px 9px olivedrab;
+    border-radius: 20px;
+    transition: .5s;
+    display: flow-root;
+    font-size: large;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px darkolivegreen;
+
 }
 #page10 #footer{
     font-family: "Bookman Old Style";

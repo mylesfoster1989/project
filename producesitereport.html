@@ -25,19 +25,19 @@
                         while (i < data.length) {
                             sitehabitat1 = data[i];
                             $("#site_report").append("<hr>" +
-                                " sitehabitatid : " + sitehabitat1.id + "<br>" +
-                                " site habitat name: " + sitehabitat1.sitehabitatname + "<br>");
+                                " <b>Site Habitat id : </b>" + sitehabitat1.id + "<br>" +
+                                " <b>Site Habitat Name:</b> " + sitehabitat1.sitehabitatname + "<br>");
 
                             sites = getsite(sitehabitat1.site);
                             k = 0;
                             while (k < sites.length) {
                                 $("#site_report").append(
-                                    " site id : " + sites[k].id + "<br>" +
-                                    " site name : " + sites[k].sitename + "<br>" +
-                                    " area  : " + sites[k].area + "<br>" +
-                                    " altitude : " + sites[k].altitude + "<br>" +
-                                    " site type : " + sites[k].sitetype + "<br>" +
-                                    " status : " + sites[k].status + "<br>"
+                                    " <b>Site id :</b> " + sites[k].id + "<br>" +
+                                    " <b>Site Name :</b> " + sites[k].sitename + "<br>" +
+                                    " <b>Area  :</b> " + sites[k].area + "<br>" +
+                                    " <b>Altitude :</b> " + sites[k].altitude + "<br>" +
+                                    " <b>Site Type :</b> " + sites[k].sitetype + "<br>" +
+                                    " <b>Status :</b> " + sites[k].status + "<br>"
                                 );
                                 k = k + 1;
                             }
@@ -46,7 +46,7 @@
                             h = 0;
                             while (h < habitats.length) {
                                 $("#site_report").append(
-                                    " habitat description : " + habitats[h].description + "<br>"
+                                    " <b>Habitat Description :</b> " + habitats[h].description + "<br>"
                                 );
                                 h = h + 1;
                             }
@@ -117,11 +117,11 @@
 
 
     </script>
-    <link rel="stylesheet" href="shwetastyle.css">
+    <link rel="stylesheet" href="mylesstyle.css">
 
 
 </head>
-<body id="page9">
+<body id="page18">
 <nav id="nav">
     <ul id="navigation">
         <li><a href="homepage.html" class="first">Administrator Menu</a></li>
@@ -174,7 +174,7 @@
 </div>
     <button type="button"><a href="homepage.html"> RETURN</a></button>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="footer">
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
 

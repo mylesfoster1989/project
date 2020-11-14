@@ -87,7 +87,7 @@
                 url: 'https://nzwetland.herokuapp.com/api/site/' + SiteID,
                 success: function (data) {
                     alert('Site has been successfully deleted.');
-                    if (confirm('Do you want to add another site?')) {
+                    if (confirm('Do you want to delete another site?')) {
                         location.reload();
                     } else {
                         console.log("");
@@ -115,12 +115,12 @@
         }
 
     </script>
-    <link rel="stylesheet" href="shwetastyle.css">
+    <link rel="stylesheet" href="mylesstyle.css">
 
 
 </head>
 
-<body id="page3">
+<body id="page15">
 
 <nav id="nav">
     <ul id="navigation">
@@ -173,7 +173,7 @@
 
 <form onsubmit="return false">
     <div>
-        <h1 style="text-align: center">Delete Site</h1>
+        <h1 style="text-align: center">DELETE SITE</h1>
 
         <p><label>Sites:</label>
 
@@ -202,13 +202,16 @@
     </table>
         <br>
     <header class="center_button" style="text-align: center">
-    <button type="button" id="delete_Site_Button">DELETE SITE</button>
+    <button type="button" id="delete_Site_Button">DELETE</button>
         <button type="button"><a href="homepage.html"> RETURN</a></button>
     </header>
 </div>
 </form>
 
 </div>
+<br>
+
+
 <div id="footer">
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
 </div>
