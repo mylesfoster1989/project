@@ -86,8 +86,8 @@
                 dataType: 'JSON',
                 url: 'https://nzwetland.herokuapp.com/api/site/' + SiteID,
                 success: function (data) {
-                    alert('Site has been successfully deleted.');
-                    if (confirm('Do you want to delete another site?')) {
+                    alert('Site deleted successfully.');
+                    if (confirm(' Delete another site?')) {
                         location.reload();
                     } else {
                         console.log("");

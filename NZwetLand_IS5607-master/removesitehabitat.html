@@ -57,6 +57,9 @@
                     }
                     $("#site_id_input").change(function () {
                         siteID = $("#site_id_input").val()
+
+                        $("#sitehabitat_id_input").empty();
+                        $("#sitehabitat_id_input").append("<option value =''>Select one</option>");
                         getSiteInfo(siteID);
                     });
                 },
@@ -64,6 +67,7 @@
                     console.log(err);
                 }
             });
+
 
             function getSiteInfo(SiteID) {
                 $.ajax({
@@ -96,6 +100,7 @@
                             $("#sitehabitat_id_input").append("<option value='" + sitehabitat.id + "'>" + sitehabitat.id + " " + sitehabitat.sitehabitatname + " " + habitat.description + "</option>");
                             i = i + 1;
                         }
+                        $("#siteHabitat_id_input").empty();
                     });
 
                 },
@@ -111,8 +116,8 @@
                     dataType: 'JSON',
                     url: 'https://nzwetland.herokuapp.com/api/Sitehabitat/' + sitehabitatID,
                     success: function (data) {
-                        alert('Site Habitat has been successfully removed.');
-                        if (confirm('Do you want to remove another site habitat?')) {
+                        alert('Site Habitat removed successfully .');
+                        if (confirm('Remove another site habitat?')) {
                             location.reload();}
                         else{
                             console.log("");
@@ -141,7 +146,7 @@
         }
     </script>
     <link rel="stylesheet" href="mylesstyle.css">
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 
 </head>
 

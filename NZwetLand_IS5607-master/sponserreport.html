@@ -12,7 +12,7 @@
         $(document).ready(function () {
             //click this button
             $("#show_report").click(function () {
-                $("#habitat_report").empty();
+                $("#report").empty();
                 //1. get all sponser
                 sponsers = getAllSponser();
                 var i = 0;
@@ -21,9 +21,9 @@
                     surveys = getSurveyBySponser(sponser.id);
                     surveys = surveys.length;
                     console.log(surveys);
-                    $("#habitat_report").append("<p><b>Sponser Id:</b> " + sponser.id + " <b>Sponser Name:</b> " + sponser.sponsorname + "</p>");
-                    $("#habitat_report").append("<p><b>Street Address:</b> " + sponser.streetaddress + " <b>Suburb:</b> " + sponser.suburb + " <b>City:</b> " +sponser.city + "</p>");
-                    $("#habitat_report").append("<p><b>Phone Number:</b> " + sponser.phonenumber + " <b>Email:</b> " + sponser.email + " <b>Number of Surveys: </b> " +surveys+ "</p><hr>");
+                    $("#report").append("<p><b>Sponser Id:</b> " + sponser.id + " <b>Sponser Name:</b> " + sponser.sponsorname + "</p>");
+                    $("#report").append("<p><b>Street Address:</b> " + sponser.streetaddress + " <b>Suburb:</b> " + sponser.suburb + " <b>City:</b> " +sponser.city + "</p>");
+                    $("#report").append("<p><b>Phone Number:</b> " + sponser.phonenumber + " <b>Email:</b> " + sponser.email + " <b>Number of Surveys: </b> " +surveys+ "</p><hr>");
 
                     i++;
                 }
@@ -71,20 +71,21 @@
         }
 
         window.onload = function () {
-            $("#habitat_report").hide();
+            $("#report").hide();
             $("#show_report").click(function () {
-                $("#habitat_report").toggle();
+                $("#report").toggle();
             })
         }
 
     </script>
+    <link rel="stylesheet" href="css/locstyles.css">
 
-    <link rel="stylesheet" href="NZwetLand_IS5607-master/css/locstyles.css">
+
 </head>
 <body id="page2">
 
 <button id="show_report">DISPLAY SPONSORS REPORT</button>
-<div id = "habitat_report" class="container">
+<div id = "report" class="container">
 
 </div>
 <button ><a href="homepage.html">RETURN</a></button>

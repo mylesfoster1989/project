@@ -37,7 +37,7 @@
                     },
                     success: function (data) {
                         alert('Site added successfully');
-                        if (confirm('Do you want to add another site?')) {
+                        if (confirm(' Add another site?')) {
                             location.reload();}
                         else{
                             console.log("");
@@ -122,7 +122,8 @@
                 <p id="area_input_err"></p>
                 <p><label>Altitude: </label><input id="altitude_input" type="number" maxlength="50" size="50"></p>
                 <p id="altitude_input_err"></p>
-                <p><label>Site Type: </label><select id="sitetype_input"></p>
+                <p><label>Site Type: </label><select id="sitetype_input">
+                </p>
                 <option>Strict Nature Reserve</option>
                 <option>National Park</option>
                 <option>Wildlife Reserve</option>

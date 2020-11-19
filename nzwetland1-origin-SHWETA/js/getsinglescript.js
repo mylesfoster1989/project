@@ -4,7 +4,7 @@ function getSinglelanduse(landuseID) {
         type: 'Get',
         dataType: 'JSON',
         async: false,
-        url: 'http://nzwetland.herokuapp.com/api/landuse/' + landuseID + '/',
+        url: 'https://nzwetland.herokuapp.com/api/landuse/' + landuseID + '/',
         success: function (data) {
             // location.reload();
             landuse1 = data;
@@ -24,7 +24,7 @@ function getSinglehabitat(habitatID) {
         type: 'Get',
         dataType: 'JSON',
         async: false,
-        url: 'http://nzwetland.herokuapp.com/api/habitat/' + habitatID + '/',
+        url: 'https://nzwetland.herokuapp.com/api/habitat/' + habitatID + '/',
         success: function (data) {
             // location.reload();
             habitat1 = data;
@@ -46,7 +46,7 @@ function getSingleSitehabitat(SitehabitatID) {
         type: 'Get',
         dataType: 'JSON',
         async: false,
-        url: 'http://nzwetland.herokuapp.com/api/Sitehabitat/' + SitehabitatID + '/',
+        url: 'https://nzwetland.herokuapp.com/api/Sitehabitat/' + SitehabitatID + '/',
         success: function (data) {
             // location.reload();
             Sitehabitat1 = data;
@@ -86,7 +86,7 @@ function getSinglehabiatatLanduse(habiatalanduseid){
         type: 'Get',
         dataType: 'JSON',
         async:false,
-        url: 'http://nzwetland.herokuapp.com/api/sitehabitatlanduse/'+habiatalanduseid+'/',
+        url: 'https://nzwetland.herokuapp.com/api/sitehabitatlanduse/'+habiatalanduseid+'/',
         success: function (data) {
             // location.reload();
             habitatlanduse1 = data;
@@ -109,7 +109,7 @@ function getAssignSitehabitatLanduse(sitehabitatID){
         type: 'Get',
         dataType: 'JSON',
         async:false,
-        url: 'http://nzwetland.herokuapp.com/api/sitehabitatlanduse/',
+        url: 'https://nzwetland.herokuapp.com/api/sitehabitatlanduse/',
         success: function (data) {
             // location.reload();
             i = 0;
@@ -137,7 +137,7 @@ function getsingleLanduse1(landuse){
         type: 'Get',
         dataType: 'JSON',
         async:false,
-        url: 'http://nzwetland.herokuapp.com/api/landuse/',
+        url: 'https://nzwetland.herokuapp.com/api/landuse/',
         success: function (data) {
             // location.reload();
             i = 0;
@@ -191,7 +191,7 @@ function getSitehabitat(sitHabitatID){
         type: 'Get',
         dataType: 'JSON',
         async:false,
-        url: 'http://nzwetland.herokuapp.com/api/Sitehabitat/'+sitHabitatID+'/',
+        url: 'https://nzwetland.herokuapp.com/api/Sitehabitat/'+sitHabitatID+'/',
         success: function (data) {
             // location.reload();
             siteHabitat = data

@@ -140,15 +140,16 @@ ul#navigation ul li a {
 
 /*Delete Habitat*/
 #page1 .container {
-    border-radius: 20px;
+    border-radius:20px;
     padding: 5%;
-    margin: 5%;
-    width: 50%;
+    margin: 4%;
+    width: 35%;
     height: fit-content;
     border: black;
     margin-right: auto;
     margin-left: auto;
     background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px whitesmoke;
 }
 #page1 #logoutBut{
     width: 100px;
@@ -171,34 +172,29 @@ ul#navigation ul li a {
     box-shadow: 0 0 20px 9px whitesmoke;
 }
 #page1 div{
-    border-radius: 30px;
-    margin: 10px;
-    padding:10px;
-    width: 100%;
-    height: 100%;
+    font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;
+    color: black;
+    width: fit-content;
+    font-size: large;
+    margin: 10px;
+    padding:15px;
+    border-radius: 20px;
+    text-align: center;
 }
 #page1 select{
     border-radius: 30px;
     height: 30px;
     width: 50%;
 }
-#page1 td{
-    font-size: large;
-    font-family: "Bookman Old Style";
-    width: 120px;
-    margin: 20px;
-    padding: 10px;
-    height: 100%;
-    border-radius: 20px;
-}
+
 #page1 input{
     text-align: center;
     font-size: large;
-    margin: 30px;
-    padding: 20px;
-    width: 120px;
-    height: 50px;
+    margin: 15px;
+    padding: 15px;
+    width:170px;
+    height: fit-content;
     border-radius: 30px;
     transition: .5s;
     font-family: "Bookman Old Style";
@@ -441,8 +437,8 @@ ul#navigation ul li a {
 /*Add Land use*/
 #page5  .container {
     border-radius:20px;
-    padding: 10%;
-    margin: 40px auto;
+    padding: 8%;
+    margin: 80px auto;
     width: 25%;
     height: fit-content;
     border: black;
@@ -487,7 +483,7 @@ ul#navigation ul li a {
 #page5  input{
     text-align: center;
     font-size: large;
-    margin: 15px;
+    margin: 15px auto;
     padding: 15px;
     width:170px;
     height: fit-content;
@@ -509,7 +505,7 @@ ul#navigation ul li a {
     color: black;
     width: 100%;
     font-size: large;
-    margin: 10px;
+    margin: 10px auto;
     padding:10px;
     border-radius: 20px;
 }
@@ -530,20 +526,15 @@ ul#navigation ul li a {
 /*Update Land use*/
 #page6 .container {
     border-radius: 20px;
-    padding: 5%;
-    margin: 5%;
-    width: 600px;
-    height:fit-content;
+    padding: 10%;
+    margin:60px auto;
+    width: 40%;
     border: black;
     margin-right: auto;
     margin-left: auto;
     background: linear-gradient(to right, whitesmoke, darkolivegreen);
 }
-#page6 #logoutBut{
-    width: 100px;
-    margin: 4px;
-    box-shadow: 0 0 20px 9px whitesmoke;
-}
+
 #page6 button {
     font-family: "Bookman Old Style";
     width: 250px;
@@ -562,27 +553,30 @@ ul#navigation ul li a {
 #page6  td{
     font-size: large;
     font-family: "Bookman Old Style";
-    width:20px;
-    margin: 1px;
+    width:30px;
+    margin: 5px auto;
     padding: 10px;
     height: fit-content;
     border-radius: 20px;
 }
 #page6 select{
     border-radius: 30px;
-    height: 30px;
-    width: 60%;
+    height: 35px;
+    width: 230px;
 }
 #page6 input{
     text-align: center;
     font-size: large;
-    margin: 10px;
-    padding: 15px;
+    margin: 10px auto;
+    padding:20px;
     width: 220px;
     height: fit-content;
     border-radius: 30px;
     transition: .5s;
     font-family: "Bookman Old Style";
+
+
+
 
 }
 #page6 h1{
@@ -604,7 +598,7 @@ ul#navigation ul li a {
     font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;
     color: whitesmoke;
-    width: 100%;
+    width: 50%;
     height: fit-content;
     font-size: large;
     margin: 10px;
@@ -632,10 +626,10 @@ ul#navigation ul li a {
 
 #page7 .container {
     border-radius:20px;
-    padding: 10%;
+    padding: 3%;
     margin: 50px auto;
-    width: 30%;
-    height: fit-content;
+    width: 40%;
+    height: 20%;
     border: black;
     margin-right: auto;
     margin-left: auto;
@@ -656,16 +650,7 @@ ul#navigation ul li a {
     box-shadow: 0 0 20px 9px darkolivegreen;
 }
 
-#page7  td{
-    font-size: large;
-    font-family: "Bookman Old Style";
-    width: fit-content;
-    margin: 20px;
-    padding: 10px;
-    height: 100%;
-    border-radius: 20px;
-    color: black;
-}
+
 #page7  select{
     border-radius: 30px;
     height: 30px;
@@ -677,8 +662,8 @@ ul#navigation ul li a {
     font-size: large;
     margin: 30px;
     padding: 20px;
-    width: 120px;
-    height: 50px;
+    width: 220px;
+    height: fit-content;
     border-radius: 30px;
     transition: .5s;
     font-family: "Bookman Old Style";
@@ -690,19 +675,13 @@ ul#navigation ul li a {
     text-align: center;
     color: black;
 }
-#page7 label{
-    font-size: large;
-    font-family: "Bookman Old Style";
-    text-align: center;
-    color: black;
 
-}
 #page7 div{
 
     font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;
     color: black;
-    width: 100%;
+    width: 80%;
     height: fit-content;
     font-size: large;
     margin: 10px;
@@ -841,66 +820,4 @@ td{
     background: whitesmoke;
 
 }
-
-/*main menu*/
-#page10 div {
-    width: 300px;
-    height: fit-content;
-    background: linear-gradient(to right, whitesmoke, darkolivegreen);
-    box-shadow: 0 0 20px 9px olivedrab;
-    font-family: "Bookman Old Style";
-    text-align: center;
-    font-size: small;
-    margin: 40px auto;
-    padding: inherit;
-    border-radius: 20px;
-    display: inline-table;
-    flex-flow: inherit;
-}
-
-#page10 #logoutBut{
-    width: 100px;
-    margin: 4px;
-    box-shadow: 0 0 20px 9px whitesmoke;
-}
-
-#page10   input {
-    font-family: "Bookman Old Style";
-    font-size: large;
-    border-radius: 10px;
-    width: 20%;
-    height: 60%;
-    text-decoration-color: black;
-
-}
-
-#page10 #exitbut{
-    width: 20%;
-    height: fit-content;
-    text-align: center;
-    display: inherit;
-}
-
-#page10  h1 {
-    text-align: center;
-    color:   darkolivegreen;
-    box-shadow: 0 0 20px 9px whitesmoke;
-}
-#page10 #footer{
-    font-family: "Bookman Old Style";
-    box-shadow: 0 0 20px 9px whitesmoke;
-    color: olivedrab;
-    width: 100%;
-    height: fit-content;
-    font-size: large;
-    margin: 1px;
-    padding:10px;
-    border-radius: 20px;
-    text-align: center;
-    background: whitesmoke;
-}
-
-
-
-
 

@@ -248,7 +248,7 @@ ul#navigation ul li a {
     margin: 4px;
     box-shadow: 0 0 20px 9px whitesmoke;
 }
-#page2 #habitat_report {
+#page2 #report{
     border-radius: 20px;
     font-family: "Bookman Old Style";
     background: linear-gradient(to right, darkseagreen, whitesmoke);
@@ -258,7 +258,6 @@ ul#navigation ul li a {
     text-align: center;
     height: fit-content;
 }
-
 
 #page2 #footer{
     font-family: "Bookman Old Style";

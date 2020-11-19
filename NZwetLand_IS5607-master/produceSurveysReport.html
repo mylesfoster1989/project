@@ -22,8 +22,8 @@
                         i = 0;
                         while (i < data.length){
                             survey1 = data[i];
-                            $("#habitat_report").append("<hr>" +
-                                " survey ID: " + survey1.id +"<br>"+
+                            $("#report").append("<hr>" +
+                                " Survey ID: " + survey1.id +"<br>"+
                                 " survey name: " + survey1.surveyname +"<br>"+
                                 " budget: " + survey1.budget+"<br>"+
                                 " start date : " + survey1.startdate +"<br>"+
@@ -33,7 +33,7 @@
                             sponsors = getsponsor(survey1.sponsor);
                             k = 0;
                                while (k<sponsors.length){
-                                $("#habitat_report").append(
+                                $("#report").append(
                                     " sponsor name : "+ sponsors[k].sponsorname
                                 );
                                 k = k + 1;
@@ -78,7 +78,7 @@
 
 
     </script>
-    <link rel="stylesheet" href="NZwetLand_IS5607-master/css/locstyles.css">
+    <link rel="stylesheet" href="css/locstyles.css">
 
 </head>
 <body id="page2">
@@ -113,7 +113,7 @@
     <button id="show_report">DISPLAY SURVEY REPORT</button>
 <button id="button"><a href="homepage.html"> RETURN</a></button>
 
-<div id = "habitat_report" class="container">
+<div id = "report" class="container">
 
 
 </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

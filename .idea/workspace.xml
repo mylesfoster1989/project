@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8560d316-9ea0-4d46-8288-5e7efb9c7986" name="Default Changelist" comment="" />
+    <list default="true" id="8560d316-9ea0-4d46-8288-5e7efb9c7986" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/NZwetLand_IS5607-master/mylesstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/NZwetLand_IS5607-master/mylesstyle.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,12 +12,24 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1kDk7beFpidPZoM1WX69QuKRp50" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -28,6 +42,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\shwet\PhpstormProjects\project-master\NZwetLand_IS5607-master\css" />
+      <recent name="C:\Users\shwet\PhpstormProjects\project-master\NZwetLand_IS5607-master" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,10 +57,30 @@
       <option name="presentableId" value="Default" />
       <updated>1605242382231</updated>
       <workItem from="1605242383316" duration="7679000" />
+      <workItem from="1605344790261" duration="1231000" />
+      <workItem from="1605346082343" duration="14866000" />
+      <workItem from="1605417952159" duration="2989000" />
+      <workItem from="1605494878948" duration="2629000" />
+      <workItem from="1605669506066" duration="8879000" />
+      <workItem from="1605729157568" duration="3019000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="520" y="236" key="#Notifications" timestamp="1605345999391">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="520" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1605345999391" />
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1605346168524">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605346168524" />
+    <state x="635" y="310" key="Github.ShareDialog" timestamp="1605355187875">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="635" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1605355187875" />
   </component>
 </project>

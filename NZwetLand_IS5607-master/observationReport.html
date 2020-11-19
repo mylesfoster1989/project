@@ -22,17 +22,17 @@
                         i = 0;
                         while (i < data.length){
                             observation1 = data[i];
-                            $("#habitat_report").append("<hr>" +
-                                " observation date : " + observation1.observationdate +"<br>"+
-                                " | ob number: " + observation1.observationnumber +"<br>"+
-                                " | status: " + observation1.status+ "<br>" );
+                            $("#report").append("<hr>" +
+                                " <b>Observation date :</b> " + observation1.observationdate +"<br>"+
+                                " | <b>Observation number:</b> " + observation1.observationnumber +"<br>"+
+                                " | <b>Status: </b>" + observation1.status+ "<br>" );
 
                             animals = getanimal(observation1.animal);
                             k = 0;
                             while (k<animals.length){
-                                $("#habitat_report").append(
-                                    " animal genus name : "+ animals[k].genusname+"<br>"+
-                                    " animal species name : "+ animals[k].speciesname+"<br>"
+                                $("#report").append(
+                                    " <b>Animal genus name :</b> "+ animals[k].genusname+"<br>"+
+                                    " <b>Animal species name :</b> "+ animals[k].speciesname+"<br>"
                                 );
                                 k = k + 1;
                             }
@@ -40,7 +40,7 @@
                             surveys = getsurvey(observation1.survey);
                             h=0;
                             while (h<surveys.length){
-                                $("#habitat_report").append(
+                                $("#report").append(
                                     " survey name : "+ surveys[h].surveyname+"<br>"
 
                                 );
@@ -50,8 +50,8 @@
                             sitehabitats = getsitehabitat(observation1.sitehabitat);
                             m=0;
                             while (m<sitehabitats.length){
-                                $("#habitat_report").append("<hr>"+
-                                    " site habitat name : "+ sitehabitats[m].sitehabitatname
+                                $("#report").append("<hr>"+
+                                    " <b>Site habitat name :</b> "+ sitehabitats[m].sitehabitatname
 
                                 );
                                 m = m + 1;
@@ -145,7 +145,7 @@
 
 
     </script>
-    <link rel="stylesheet" href="NZwetLand_IS5607-master/css/locstyles.css">
+    <link rel="stylesheet" href="css/locstyles.css">
 </head>
 <body id="page2">
 
@@ -175,7 +175,7 @@
 
 
     <button id="show_report">DISPLAY OBSERVATION REPORT</button>
-<div id = "habitat_report" class="container">
+<div id = "report" class="container">
 
 
 </div>

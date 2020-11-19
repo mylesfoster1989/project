@@ -403,6 +403,7 @@ td{
 
 /*mainmenu and homepage*/
 /*main menu*/
+
 #page10 div {
     width: 320px;
     height: fit-content;
@@ -446,11 +447,7 @@ td{
     color:   Black;
     box-shadow: 0 0 20px 9px whitesmoke;
 }
-/*h6 {*/
-/*    text-align: center;*/
-/*    font-family: "Bookman Old Style";*/
-/*    box-shadow: 0 0 20px 9px whitesmoke*/
-/*}*/
+
 #page10 #footer{
     font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;

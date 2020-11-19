@@ -2,71 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ADD Land use</title>
+    <title>Delete Habitat</title>
 
     <script
-            src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous">
+
     </script>
-    <script> $(document).ready(function (){
+    <script>$(document).ready(function (){
         $.ajax({
             type: 'Get',
             dataType: 'JSON',
-            url: 'http://nzwetland.herokuapp.com/api/landuse/',
+            url: 'https://nzwetland.herokuapp.com/api/habitat/',
             success: function (data) {
                 // location.reload();
 
                 i = 0;
                 while (i < data.length){
-                    landuse = data[i];
-                    $("#landuse_input").append("<option value='"+landuse.id+"'>"+landuse.description+" "+landuse.landusetype+"\</option>");
+                    habitat = data[i];
+                    $("#habitat_id_input").append("<option value='"+habitat.id+"'>" +
+                        "ID:" +habitat.id+
+                        "|Description: "+habitat.description+"\</option>");
                     i = i + 1;
                 }
+                $("#habitat_id_input").change(function (){
+                    habitat = getSinglehabitat($("#habitat_id_input").val());
+                    $("#habitat_id").text(habitat.id);
+                    $("#habitat_description").text(habitat.description);
+                    $("#habitat_habitattype").text(habitat.habitattype);
 
+                })
             },
             error: function (err) {
                 console.log(err);
             }
         });
-        $("#add_landuse_but").click(function () {
-
-            description = $("#landuse_description").val();
-            landusetype= $("#landuse_landusetype").val();
-
+        $("#delete_but").click(function () {
+            deletehabitat     = $("#habitat_id_input").val();
             $.ajax({
-                type: 'POST',
+                type: 'DELETE',
                 dataType: 'JSON',
-                url: 'http://nzwetland.herokuapp.com/api/landuse/',
-                data: {
-
-                    description: description,
-                    landusetype: landusetype,
-
-                },
+                url: 'http://nzwetland.herokuapp.com/api/habitat/'+deletehabitat,
                 success: function (data) {
-                    alert('land use added successfully');
-                    if (confirm(' Add another land use?')) {
+                    alert('Habitat  deleted successfully');
+                    if (confirm(' Delete another Habitat?')) {
                         location.reload();}
                     else{
                         console.log("");
                         window.location.href = "homepage.html";
                     }
+
                 },
-
-
+                error: function (err) {
+                    console.log(err);
+                    errors = JSON.parse(err.responseText);
+                    console.log(errors);
+                    $("#habitat_id_input_err").text(errors.name);
+                }
             });
-
         });
-
     })
     </script>
 
 
 
-    <link rel="stylesheet" href="nzwetland1-origin-SHWETA/style/style.css">
+
+    <link rel="stylesheet" href="mylesstyle.css">
+    <script src="../nzwetland1-origin-SHWETA/js/getsinglescript.js"></script>
+
 </head>
-<body id="page5">
+<body id="page15">
 <nav id="nav">
     <ul id="navigation">
         <li><a href="homepage.html" class="first">Administrator Menu</a></li>
@@ -109,37 +115,50 @@
 
 
     </ul>
-
-</nav><br>
-<div class="container"style="text-align: center">
-    <div>
-        <h1 style="text-align: center">Add Land use</h1>
-        <form onsubmit="return false">
+</nav><br><br>
+<div class="container">
 
 
+    <form onsubmit="return false">
+        <div class="div_deletehabitat">
+            <h1>Delete Habitat</h1>
+            <p><label> Habitat: </label>
+                <select id="habitat_id_input">
+                    <option value="">Select one</option>
+                </select>
+            </p>
             <table>
-                    <tr>
-                        <td>Description:</td>
-                        <td> <input id="landuse_description" type="text" maxlength="40" size="40">
+                <tr>
+                    <td>Habitat ID:</td>
+                    <td id="habitat_id"></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td id="habitat_description"></td>
+                </tr>
+                <tr>
+                    <td>Habitat Type:</td>
+                    <td id="habitat_habitattype"></td>
+                </tr>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Land Use Type:</td>
-                        <td><input id = "landuse_landusetype" type="text" maxlength="30"  size="30"></td>
-                    </tr>
             </table>
+            <header class="div_but" style="text-align: center">
+
+                <button id="delete_but">DELETE HABITAT</button>
+                <button type="button"><a href="homepage.html"> RETURN</a></button>
+            </header>
+        </div>
+
+    </form>
 
 
-        </form>
-
-    <button id="add_landuse_but">ADD LANDUSE</button>
-        <button type="button"><a href="homepage.html"> RETURN</a></button>
-
-
-</div>
 </div><br><br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div id="footer">
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
