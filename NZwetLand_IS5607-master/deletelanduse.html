@@ -14,7 +14,7 @@
             $.ajax({
                 type: 'Get',
                 dataType: 'JSON',
-                url: 'https://nzwetland.herokuapp.com/api/landuse/',
+                url: 'http://nzwetland.herokuapp.com/api/landuse/',
                 success: function (data) {
                     // location.reload();
 
@@ -44,7 +44,7 @@
                 $.ajax({
                     type: 'DELETE',
                     dataType: 'JSON',
-                    url: 'https://nzwetland.herokuapp.com/api/landuse/'+deletelanduse,
+                    url: 'http://nzwetland.herokuapp.com/api/landuse/'+deletelanduse,
                     success: function (data) {
                         alert('Land use Deleted successfully');
                         if (confirm(' Delete another land use?')) {
@@ -66,13 +66,15 @@
 
 
 
-    <script src="../nzwetland1-origin-SHWETA/js/getsinglescript.js"></script>
 
+
+    <script src="../nzwetland1-origin-SHWETA/js/getsinglescript.js"></script>
     <script src="../nzwetland1-origin-SHWETA/js/script.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="mylesstyle.css">
+
 
 </head>
-<body id="page7">
+<body id="page15">
 
 <nav id="nav">
     <ul id="navigation">
@@ -119,53 +121,43 @@
 </nav><br>
 </div>
 
+<div class="container">
+    <div>
+        <h4 style="text-align: center">DELETE LAND USE</h4>
+        <form onsubmit="return false">
 
-        <form onsubmit="return false">m onsubmit ="return false">
-            <div class="container">
+            <p><label> Land uses: </label>
+                <select id="landuse_id_input" >
+                    <option value="">Select one</option>
+                </select>
+            </p>
+            <table>
+                <tr>
+                    <td>Land use ID:</td>
+                    <td id="landuse_id" type="text" ></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td id="landuse_description" type="text"maxlength="40" size="40"></td>
+                </tr>
+                <tr>
+                    <td>Land use type:</td>
+                    <td id="landuse_landusetype"  type="text" maxlength="30" size="30"></td>
+                </tr>
 
-                <h1>Delete Land use</h1>
-                <table>
-
-
-                <p><label> Land uses: </label>
-                    <select id="landuse_id_input" >
-                        <option value="">Select one</option>
-                    </select>
-                </p>
-
-                        <p><label>Land use ID:</label>
-                        <input id="landuse_id" type="text" ></p>
-
-            <p> <label>Land use Description:</label><input id = "landuse_description" type = "text" maxlength="40" size="40"></p>
-            <p> <label>Land use Type:</label><input id = "landuse_landusetype" type = "text" maxlength="30" size="30"></p>
-                </table>
-                <header class="center_button" style="text-align: center">
-
-                    <button id="delete_but" >DELETE</button>
-                    <button type="button"><a href="homepage.html"> RETURN</a></button>
-                </header>
+            </table>
 
 
-</div>
 
         </form>
 
 
+        <button id="delete_but" style="text-align: center">DELETE</button>
+        <button type="button"><a href="homepage.html"> RETURN</a></button>
+
 
     </div>
 </div><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <div id="footer">
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
