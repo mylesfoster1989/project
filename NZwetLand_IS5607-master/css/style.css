@@ -524,87 +524,81 @@ ul#navigation ul li a {
     background: whitesmoke;
 }
 /*Update Land use*/
-#page6 .container {
-    border-radius: 20px;
-    padding: 10%;
-    margin:60px auto;
-    width: 40%;
+#page6  .container {
+    border-radius:20px;
+    padding: 5%;
+    margin: 4%;
+    width: 25%;
+    height: fit-content;
     border: black;
     margin-right: auto;
     margin-left: auto;
     background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px whitesmoke;
 }
-
-#page6 button {
+#page6 #logoutBut{
+    width: 100px;
+    margin: 4px;
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+#page6    button {
     font-family: "Bookman Old Style";
-    width: 250px;
-    margin: 7px;
+    width: 150px;
+    margin: 10px;
     padding: 10px;
-    height: fit-content;
-    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    height: 80%;
+    background: linear-gradient(to right, whitesmoke, olive);
     border-radius: 20px;
     transition: .5s;
-    box-shadow: 0 0 20px 9px whitesmoke;
-    float: right;
+    box-shadow: 0 0 20px 9px darkolivegreen;
 }
-
-
-
-#page6  td{
+#page6 label {
     font-size: large;
     font-family: "Bookman Old Style";
-    width:30px;
-    margin: 5px auto;
+    text-align: center;
+}
+
+#page6   td{
+    font-size: large;
+    font-family: "Bookman Old Style";
+    width: fit-content;
+    margin: 20px;
     padding: 10px;
     height: fit-content;
     border-radius: 20px;
+
 }
-#page6 select{
-    border-radius: 30px;
-    height: 35px;
-    width: 230px;
-}
-#page6 input{
+
+#page6  input{
     text-align: center;
     font-size: large;
-    margin: 10px auto;
-    padding:20px;
-    width: 220px;
+    margin: 15px;
+    padding: 15px;
+    width:170px;
     height: fit-content;
     border-radius: 30px;
     transition: .5s;
     font-family: "Bookman Old Style";
-
-
-
-
 }
-#page6 h1{
+
+#page6  h1{
     font-size: xx-large;
     font-family: "Bookman Old Style";
     text-align: center;
-    color: black;
-}
-
-#page6 label{
-    font-size: large;
-    font-family: "Bookman Old Style";
-    text-align: center;
-    color: black;
 }
 
 #page6 div{
 
     font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;
-    color: whitesmoke;
-    width: 50%;
-    height: fit-content;
+    color: black;
+    width: 100%;
     font-size: large;
     margin: 10px;
     padding:10px;
     border-radius: 20px;
 }
+
 #page6 #footer{
     font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;
@@ -618,51 +612,68 @@ ul#navigation ul li a {
     text-align: center;
     background: whitesmoke;
 }
-
-
-
-
-/* Delete Landuse */
-
-#page7 .container {
-    border-radius:20px;
-    padding: 3%;
-    margin: 50px auto;
-    width: 40%;
-    height: 20%;
-    border: black;
-    margin-right: auto;
-    margin-left: auto;
-    background: linear-gradient(to right, whitesmoke, darkolivegreen);
-}
-
-
-
-#page7  button {
-    font-family: "Bookman Old Style";
-    width: 170px;
-    margin: 5px;
-    padding: 2%;
-    height:fit-content;
-    background: linear-gradient(to right, whitesmoke, olive);
-    border-radius: 20px;
-    transition: .5s;
-    box-shadow: 0 0 20px 9px darkolivegreen;
-}
-
-
-#page7  select{
+#page6  select {
     border-radius: 30px;
     height: 30px;
     width: 60%;
     color: black;
 }
-#page7 input{
+
+
+
+
+/* Delete Landuse */
+#page7  .container {
+    border-radius:20px;
+    padding: 5%;
+    margin: 4%;
+    width: 25%;
+    height: fit-content;
+    border: black;
+    margin-right: auto;
+    margin-left: auto;
+    background: linear-gradient(to right, whitesmoke, darkolivegreen);
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+#page7 #logoutBut{
+    width: 100px;
+    margin: 4px;
+    box-shadow: 0 0 20px 9px whitesmoke;
+}
+#page7    button {
+    font-family: "Bookman Old Style";
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    height: 80%;
+    background: linear-gradient(to right, whitesmoke, olive);
+    border-radius: 20px;
+    transition: .5s;
+    box-shadow: 0 0 20px 9px darkolivegreen;
+}
+#page7 label {
+    font-size: large;
+    font-family: "Bookman Old Style";
+    text-align: center;
+}
+
+#page7   td{
+    font-size: large;
+    font-family: "Bookman Old Style";
+    width: fit-content;
+    margin: 20px;
+    padding: 10px;
+    height: fit-content;
+    border-radius: 20px;
+
+}
+
+#page7  input{
     text-align: center;
     font-size: large;
-    margin: 30px;
-    padding: 20px;
-    width: 220px;
+    margin: 15px;
+    padding: 15px;
+    width:170px;
     height: fit-content;
     border-radius: 30px;
     transition: .5s;
@@ -673,7 +684,6 @@ ul#navigation ul li a {
     font-size: xx-large;
     font-family: "Bookman Old Style";
     text-align: center;
-    color: black;
 }
 
 #page7 div{
@@ -681,13 +691,11 @@ ul#navigation ul li a {
     font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;
     color: black;
-    width: 80%;
-    height: fit-content;
+    width: 100%;
     font-size: large;
     margin: 10px;
     padding:10px;
     border-radius: 20px;
-
 }
 
 #page7 #footer{
@@ -702,6 +710,12 @@ ul#navigation ul li a {
     border-radius: 20px;
     text-align: center;
     background: whitesmoke;
+}
+#page7  select {
+    border-radius: 30px;
+    height: 30px;
+    width: 60%;
+    color: black;
 }
 
 /*Produce landuse report*/
