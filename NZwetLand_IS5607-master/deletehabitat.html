@@ -43,7 +43,7 @@
             $.ajax({
                 type: 'DELETE',
                 dataType: 'JSON',
-                url: 'http://nzwetland.herokuapp.com/api/habitat/'+deletehabitat,
+                url: 'https://nzwetland.herokuapp.com/api/habitat/'+deletehabitat,
                 success: function (data) {
                     alert('Habitat  deleted successfully');
                     if (confirm(' Delete another Habitat?')) {
